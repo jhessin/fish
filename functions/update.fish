@@ -1,16 +1,15 @@
 function update
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish
-  source $HOME/.config/fish/files.fish
 
   # copy backup files
   set target $HOME/.config/fish/backup
-  for file in $files
-    cp $target/$file $HOME
+  for file in $target/*
+    cp $file $HOME
   end
 
   for dir in $repos
-    pushdir $dir
+    pushd $dir
     gpull
     popd
   end
