@@ -1,8 +1,24 @@
 function backup
-  # first we backup this repo
+  # bring in any additional repos and files
+  source $HOME/.config/fish/repos.fish
+  source $HOME/.config/fish/files.fish
+
+  # copy backup files
+  for file in $files
+    cp file $HOME/.config/fish/backup/
+  end
+
+  # backup this repo
   pushd $HOME/.config/fish
   gpush
   popd
+
+  # then we backup extra repos
+  for dir in $repos
+    pushd $dir
+    gpush
+    popd
+  end
 
   # then we backup the github and bitbucket repos
   for dir in $HOME/Documents/github/*
