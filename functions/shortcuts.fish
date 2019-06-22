@@ -1,42 +1,54 @@
 # EDIT THIS FILE QUICKLY
 function shortcuts
-vim ~/.config/fish/functions/shortcuts.fish
+  vim ~/.config/fish/functions/shortcuts.fish
 end
 
 # shortcuts to common directories
 function github
-cd ~/Documents/github/$argv
+  if test (count $argv) -eq 0
+    set argv .
+  end
+
+  cd ~/Documents/github/$argv
 end
 
-function bitbucket
-cd ~/Documents/bitbucket/$argv
+function bitbucket 
+  if test (count $argv) -eq 0
+    set argv .
+  end
+
+  cd ~/Documents/bitbucket/$argv
 end
 
 function notes
-cd ~/Documents/github/notes/
+  cd ~/Documents/github/notes/
 end
 
-function fishrc
-cd ~/.config/fish/$argv
+function fishrc 
+  if test (count $argv) -eq 0
+    set argv .
+  end
+
+  cd ~/.config/fish/$argv
 end
 
 # Reload the config file
 function reload
-source ~/.config/fish/config.fish
+  source ~/.config/fish/config.fish
 end
 
 # some git shortcuts
 function gpush
-git add .
-git commit
-git push
+  git add .
+  git commit
+  git push
 end
 
 function gpull
-git pull
+  git pull
 end
 
 function greset
-git reset --hard
+  git reset --hard
 end
 

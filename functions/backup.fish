@@ -4,8 +4,12 @@ function backup
   source $HOME/.config/fish/files.fish
 
   # copy backup files
+  set target $HOME/.config/fish/backup
+  if not test -d $target
+    mkdir $target
+  end
   for file in $files
-    cp file $HOME/.config/fish/backup/
+    cp $file $HOME/.config/fish/backup/
   end
 
   # backup this repo
