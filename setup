@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [[ `uname` == 'Linux' ]]; then
+  echo "Linux detected"
+  if [[ ! `type brew` ]]; then
+    sudo apt-get install build-essential curl file git
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  fi
+  if [[ ! `type fish` ]]; then
+    echo "fish not found - installing"
+    brew install fish
+  else
+    echo "fish found"
+  fi
+elif [[ `uname` == 'Darwin' ]]; then
+  echo "Darwin detected"
+  if [[ ! `type brew` ]]; then
+    echo "brew not found - installing"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "brew found"
+  fi
+  if [[ ! `type fish` ]]; then
+    echo "fish not found - installing"
+    brew install fish
+  else
+    echo "fish found"
+  fi
+fi
+
+fish setup.fish
