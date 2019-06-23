@@ -10,6 +10,11 @@ if not test (type hub)
   brew install hub
 end
 
+# clone this repo if necessary
+if not test -d ~/.config/fish
+  hub clone jhessin/fish
+end
+
 # Set up curl if we don't have it
 if not test (type curl)
   brew install curl
