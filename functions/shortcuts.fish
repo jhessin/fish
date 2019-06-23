@@ -3,6 +3,15 @@ function shortcuts
   vim ~/.config/fish/functions/shortcuts.fish
 end
 
+# edit tmux config file
+function tmuxconfig
+  vim ~/.tmux.conf
+end
+
+function fishbindings
+  vim ~/.config/fish/functions/fish_user_keybindings.fish
+end
+
 # shortcuts to common directories
 function github
   if test (count $argv) -eq 0
