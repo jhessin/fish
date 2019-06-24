@@ -23,5 +23,8 @@ set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -gx PATH $PATH /home/jhessin/.local/bin 
 set -gx PATH $PATH /home/jhessin/.gem/ruby/2.3.0/bin 
 
+# Add cargo and it's installs to the path
+set -gx PATH /home/jhessin/.cargo/bin $PATH
+
 # Add yarn and it's installs to the path
 set -gx PATH $PATH /home/jhessin/.yarn/bin
