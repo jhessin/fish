@@ -24,6 +24,10 @@ end
 if not test (type nvim)
   brew install neovim
  # set up spacevim
+  set NVIM /home/linuxbrew/.linuxbrew/bin/nvim
+  ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vim
+  ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vi
+  ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/editor
   curl -sLf https://spacevim.org/install.sh | bash
 end
 
