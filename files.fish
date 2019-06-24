@@ -1,1 +1,3 @@
-set -x files $HOME/.gitconfig $HOME/.tmux.conf
+set -x files
+set -x files $files $HOME/.gitconfig
+set -x files $files $HOME/.tmux.conf
