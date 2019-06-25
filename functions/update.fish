@@ -4,8 +4,9 @@ function update
 
   # copy backup files
   set target $HOME/.config/fish/backup
-  for file in $target/*
-    cp $file $HOME
+  # keep an eye on this - if I add anything that isn't proceeded by a dot it could be tricky
+  for file in $target/.*
+    cp -v $file $HOME
   end
 
   for dir in $repos
