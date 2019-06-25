@@ -1,3 +1,4 @@
+
 # See if we need git and download if necessary
 if not test (type git)
   brew install git
@@ -31,6 +32,24 @@ if not test (type nvim)
   curl -sLf https://spacevim.org/install.sh | bash
 end
 
+# set up fonts
+mkdir -p /tmp/adodefont
+pushd /tmp/adodefont
+wget -q --show-progress -O source-code-pro.zip https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+unzip -q source-code-pro.zip -d source-code-pro
+mkdir -p ~/.fonts
+cp -v source-code-pro/*/OTF/*.otf ~/.fonts/
+fc-cache -f
+rm -rf source-code-pro{,.zip}
+popd
+# wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+# unzip 1.050R-it.zip
+# if not test -d ~/.fonts
+  # mkdir -p ~/.fonts
+# end
+# cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+# rm -rf source-code-pro-2.030R-ro-1.050R-it/
+# fc-cache -f -v
 # ensure my spacevim repo is cloned
 if not test -d ~/.SpaceVim.d
   if not git clone git@bitbucket.org:jhessin/vim.git ~/.SpaceVim.d
