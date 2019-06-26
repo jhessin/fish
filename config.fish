@@ -31,3 +31,6 @@ set -gx PATH /home/jhessin/.cargo/bin $PATH
 
 # Add yarn and it's installs to the path
 set -gx PATH $PATH /home/jhessin/.yarn/bin
+
+# set up the emscripten environment
+# source $HOME/.config/fish/emsdk_set_env.fish
