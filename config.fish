@@ -1,6 +1,9 @@
 # add shortcuts and tools
 source $HOME/.config/fish/functions/shortcuts.fish
 
+# add the LFS path
+set LFS /mnt/lfs
+
 # custom bindings to work with tmux
 set -g fish_key_bindings fish_user_keybindings
 
