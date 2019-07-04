@@ -23,14 +23,14 @@ set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
 set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 
 # Add ruby gems to the path
-set -gx PATH $PATH /home/jhessin/.local/bin 
-set -gx PATH $PATH /home/jhessin/.gem/ruby/2.3.0/bin 
+set -gx PATH $PATH $HOME/.local/bin 
+set -gx PATH $PATH $HOME/.gem/ruby/2.3.0/bin 
 
 # Add cargo and it's installs to the path
-set -gx PATH /home/jhessin/.cargo/bin $PATH
+set -gx PATH $HOME/.cargo/bin $PATH
 
 # Add yarn and it's installs to the path
-set -gx PATH $PATH /home/jhessin/.yarn/bin
+set -gx PATH $PATH $HOME/.yarn/bin
 
 # set up the emscripten environment
 # source $HOME/.config/fish/emsdk_set_env.fish
