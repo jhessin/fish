@@ -11,18 +11,21 @@ function update
 
   for dir in $repos
     pushd $dir
+    echo "updating $dir"
     gpull
     popd
   end
 
   for dir in $HOME/Documents/github/*
     pushd $dir
+    echo "updating $dir"
     gpull
     popd
   end
 
   for dir in $HOME/Documents/bitbucket/*
     pushd $dir
+    echo "updating $dir"
     gpull
     popd
   end
