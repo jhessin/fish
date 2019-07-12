@@ -1,6 +1,10 @@
 # add shortcuts and tools
 source $HOME/.config/fish/functions/shortcuts.fish
 
+# set up proper keyboard options if necessary
+setxkbmap -option
+setxkbmap -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:ATM -option caps:escape
+
 # add the LFS path
 set LFS /mnt/lfs
 
