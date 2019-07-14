@@ -33,6 +33,10 @@ function notes
   cd ~/Documents/github/notes/
 end
 
+function novel
+  cd ~/Documents/github/novel/
+end
+
 function fishrc 
   if test (count $argv) -eq 0
     set argv .

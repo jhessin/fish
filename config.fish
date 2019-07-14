@@ -1,10 +1,6 @@
 # add shortcuts and tools
 source $HOME/.config/fish/functions/shortcuts.fish
 
-# set up proper keyboard options if necessary
-setxkbmap -option
-setxkbmap -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:ATM -option caps:escape
-
 # add the LFS path
 set LFS /mnt/lfs
 
@@ -21,7 +17,9 @@ set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
 # if necessary set the keyboard layout
-# setxkbmap -layout us -variant dvp -option compose:102 -option keypad:atm -option numpad:shift3 -option kpdl:semi
+if test (type setxkbmap)
+  setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:ATM -option caps:escape
+end
 
 # Add homebrew and it's installs to the path
 set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
