@@ -18,6 +18,7 @@ set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
 
 # if necessary set the keyboard layout
 if test (type setxkbmap)
+  echo "Setting up programmer dvorak - hopefully"
   setxkbmap -option
   setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:ATM -option caps:escape
 end
@@ -35,5 +36,7 @@ set -gx PATH $HOME/.cargo/bin $PATH
 # Add yarn and it's installs to the path
 set -gx PATH $PATH $HOME/.yarn/bin
 
+# Add pip's bin to path
+set -gx PATH $PATH $HOME/Library/Python/3.7/bin
 # set up the emscripten environment
 # source $HOME/.config/fish/emsdk_set_env.fish
