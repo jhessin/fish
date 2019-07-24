@@ -38,5 +38,9 @@ set -gx PATH $PATH $HOME/.yarn/bin
 
 # Add pip's bin to path
 set -gx PATH $PATH $HOME/Library/Python/3.7/bin
+
+# Add powerline
+set fish_function_path $fish_function_path "$HOME/Library/Python/3.7/lib/python/site-packages/powerline/bindings/fish"
+powerline-setup
 # set up the emscripten environment
 # source $HOME/.config/fish/emsdk_set_env.fish
