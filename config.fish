@@ -23,6 +23,14 @@ if test (type setxkbmap)
   setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:ATM -option caps:escape
 end
 
+if test -d "$HOME/Library/Python/3.7/lib/python/site-packages"
+  set -gx POWERLINE_PATH $HOME/Library/Python/3.7/lib/python/site-packages/powerline
+  set -gx PATH $PATH $HOME/Library/Python/3.7/bin
+else if test -d "$HOME/.local/lib/python3.7/site-packages"
+  set -gx POWERLINE_PATH $HOME/.local/lib/python3.7/site-packages/powerline
+  # set -gx PATH $PATH $HOME/.local/lib/python3.7/
+end
+
 # Add homebrew and it's installs to the path
 set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 
@@ -36,11 +44,8 @@ set -gx PATH $HOME/.cargo/bin $PATH
 # Add yarn and it's installs to the path
 set -gx PATH $PATH $HOME/.yarn/bin
 
-# Add pip's bin to path
-set -gx PATH $PATH $HOME/Library/Python/3.7/bin
-
 # Add powerline
-set fish_function_path $fish_function_path "$HOME/Library/Python/3.7/lib/python/site-packages/powerline/bindings/fish"
+set fish_function_path $fish_function_path "$POWERLINE_PATH/bindings/fish"
 powerline-setup
 # set up the emscripten environment
 # source $HOME/.config/fish/emsdk_set_env.fish
