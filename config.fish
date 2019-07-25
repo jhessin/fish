@@ -28,7 +28,8 @@ if test -d "$HOME/Library/Python/3.7/lib/python/site-packages"
   set -gx PATH $PATH $HOME/Library/Python/3.7/bin
 else if test -d "$HOME/.local/lib/python3.7/site-packages"
   set -gx POWERLINE_PATH $HOME/.local/lib/python3.7/site-packages/powerline
-  # set -gx PATH $PATH $HOME/.local/lib/python3.7/
+else if test -d "/home/linuxbrew/.linuxbrew/lib/python3.7/site-packages"
+  set -gx POWERLINE_PATH /home/linuxbrew/.linuxbrew/lib/python3.7/site-packages/powerline
 end
 
 # Add homebrew and it's installs to the path
