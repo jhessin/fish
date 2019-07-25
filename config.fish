@@ -1,3 +1,4 @@
+#!/home/linuxbrew/.linuxbrew/bin/fish
 # add shortcuts and tools
 source $HOME/.config/fish/functions/shortcuts.fish
 
