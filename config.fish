@@ -20,7 +20,7 @@ set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
 if test (type setxkbmap)
   echo "Setting up programmer dvorak - hopefully"
   setxkbmap -option
-  setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:ATM -option caps:escape
+  setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:escape
 end
 
 if test -d "$HOME/Library/Python/3.7/lib/python/site-packages"
