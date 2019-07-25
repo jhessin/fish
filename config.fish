@@ -17,7 +17,7 @@ set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
 # if necessary set the keyboard layout
-if test (type setxkbmap)
+if test (type -q setxkbmap)
   echo "Setting up programmer dvorak - hopefully"
   setxkbmap -option
   setxkbmap -layout us -variant dvp -option compose:102 -option numpad:shift3 -option kpdl:semi -option keypad:atm -option caps:escape
