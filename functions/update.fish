@@ -1,5 +1,8 @@
 function update
 
+  # save the current directory for later
+  pushd .
+
   # first update this repo
   cd ~/.config/fish
   gpull
@@ -33,4 +36,6 @@ function update
     gpull
     popd
   end
+
+  popd
 end
