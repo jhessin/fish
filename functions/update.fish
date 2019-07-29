@@ -1,11 +1,10 @@
 function update
 
-  # save the current directory for later
-  pushd .
-
   # first update this repo
-  cd ~/.config/fish
-  gpull
+  if pushd ~/.config/fish
+    gpull
+    popd
+  end
 
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish
@@ -17,25 +16,27 @@ function update
   end
 
   for dir in $repos
-    pushd $dir
-    echo "updating $dir"
-    gpull
-    popd
+    if pushd $dir
+      echo "updating $dir"
+      gpull
+      popd
+    end
   end
 
   for dir in $HOME/Documents/github/*
-    pushd $dir
-    echo "updating $dir"
-    gpull
-    popd
+    if pushd $dir
+      echo "updating $dir"
+      gpull
+      popd
+    end
   end
 
   for dir in $HOME/Documents/bitbucket/*
-    pushd $dir
-    echo "updating $dir"
-    gpull
-    popd
+    if pushd $dir
+      echo "updating $dir"
+      gpull
+      popd
+    end
   end
 
-  popd
 end

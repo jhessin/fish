@@ -13,31 +13,35 @@ function backup
   end
 
   # backup this repo
-  pushd $HOME/.config/fish
-  echo "saving fish config files"
-  gpush
-  popd
+  if pushd $HOME/.config/fish
+    echo "saving fish config files"
+    gpush
+    popd
+  end
 
   # then we backup extra repos
   for dir in $repos
-    pushd $dir
-    echo "saving $dir"
-    gpush
-    popd
+    if pushd $dir
+      echo "saving $dir"
+      gpush
+      popd
+    end
   end
 
   # then we backup the github and bitbucket repos
   for dir in $HOME/Documents/github/*
-    pushd $dir
-    echo "saving $dir"
-    gpush
-    popd
+    if pushd $dir
+      echo "saving $dir"
+      gpush
+      popd
+    end
   end
 
   for dir in $HOME/Documents/bitbucket/*
-    pushd $dir
-    echo "saving $dir"
-    gpush
-    popd
+    if pushd $dir
+      echo "saving $dir"
+      gpush
+      popd
+    end
   end
 end
