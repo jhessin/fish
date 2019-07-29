@@ -2,6 +2,9 @@
 # add shortcuts and tools
 source $HOME/.config/fish/functions/shortcuts.fish
 
+# add homebrew paths
+
+
 # add the LFS path
 set LFS /mnt/lfs
 
@@ -26,7 +29,7 @@ end
 
 if test -d "$HOME/Library/Python/3.7/lib/python/site-packages"
   set -gx POWERLINE_PATH $HOME/Library/Python/3.7/lib/python/site-packages/powerline
-  set -gx PATH $PATH $HOME/Library/Python/3.7/bin
+  set -g fish_user_paths $fish_user_paths $HOME/Library/Python/3.7/bin
 else if test -d "$HOME/.local/lib/python3.7/site-packages"
   set -gx POWERLINE_PATH $HOME/.local/lib/python3.7/site-packages/powerline
 else if test -d "/home/linuxbrew/.linuxbrew/lib/python3.7/site-packages"
@@ -34,20 +37,24 @@ else if test -d "/home/linuxbrew/.linuxbrew/lib/python3.7/site-packages"
 end
 
 # Add homebrew and it's installs to the path
-set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
+set -g fish_user_paths /home/linuxbrew/.linuxbrew/bin $fish_user_paths
+set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 
 # Add ruby gems to the path
-set -gx PATH $PATH $HOME/.local/bin 
-set -gx PATH $PATH $HOME/.gem/ruby/2.3.0/bin 
+set -g fish_user_paths $fish_user_paths $HOME/.local/bin 
+set -g fish_user_paths $fish_user_paths $HOME/.gem/ruby/2.3.0/bin 
 
 # Add cargo and it's installs to the path
-set -gx PATH $HOME/.cargo/bin $PATH
+set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
 # Add yarn and it's installs to the path
-set -gx PATH $PATH $HOME/.yarn/bin
+set -g fish_user_paths $fish_user_paths $HOME/.yarn/bin
 
 # Add powerline
 set fish_function_path $fish_function_path "$POWERLINE_PATH/bindings/fish"
 powerline-setup
 # set up the emscripten environment
 # source $HOME/.config/fish/emsdk_set_env.fish
+
+# add Android SDK path
+set -gx ANDROID_HOME "$HOME/Android/Sdk"
