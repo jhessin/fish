@@ -2,10 +2,19 @@
 
 if [[ `uname` == 'Linux' ]]; then
   echo "Linux detected"
+  if [[ ! `type aptitude` ]]; then
+    echo "installing aptitude"
+    sudo apt-get install aptitude
+  fi
   if [[ ! `type brew` ]]; then
-    sudo apt-get install build-essential curl file git
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    if [[ -f /home/linuxbrew/.linuxbrew/bin ]]; then
+      echo "brew not in path - correcting"
+      export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    else
+      sudo apt-get install build-essential curl file git
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+      export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    fi
   fi
   if [[ ! `type fish` ]]; then
     echo "fish not found - installing"
@@ -29,4 +38,9 @@ elif [[ `uname` == 'Darwin' ]]; then
   fi
 fi
 
-fish setup.fish
+# clone the initial repo
+if [[ ! -d $HOME/.config/fish ]]; then
+  git clone git@github:jhessin/fish.git
+fi
+
+fish $HOME/.config/fish/setup.fish

@@ -6,14 +6,17 @@ else
   echo "git found"
 end
 
+if not test (type pip3)
+  brew install python3
+else
+  echo "Python3 installed"
+end
+
+pip3 install powerline-status
+
 # Get hub as a shortcut
 if not test (type hub)
   brew install hub
-end
-
-# clone this repo if necessary
-if not test -d ~/.config/fish
-  hub clone jhessin/fish
 end
 
 # Set up curl if we don't have it
@@ -58,4 +61,13 @@ if not test -d ~/.irssi/.git
   hub clone jhessin/.irssi ~/.irssi
 end
 
-update
+# ensure the .i3 is cloned and up to date
+if not test -d ~/.config/i3/.git
+  rm -rf ~/.config/i3
+  hub clone jhessin/i3 ~/.config/i3
+end
+
+# install i3blocks if necessary
+if not test (type i3blocks)
+  sudo apt-get install i3blocks
+end
