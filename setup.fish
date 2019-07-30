@@ -68,6 +68,11 @@ if not test -d ~/.config/i3/.git
   hub clone jhessin/i3 ~/.config/i3
 end
 
+if not test -d ~/.config/powerline/.git
+  rm -rf ~/.config/powerline
+  hub clone jhessin/powerline ~/.config/powerline
+end
+
 # install i3blocks if necessary
 if not test (type i3blocks)
   sudo apt-get install i3blocks
