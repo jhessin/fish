@@ -49,7 +49,8 @@ if not test -e ~/.fonts/SourceCodePro-Semibold.otf
 end
 
 # ensure my spacevim repo is cloned
-if not test -d ~/.SpaceVim.d
+if not test -d ~/.SpaceVim.d/.git
+  rm -rf ~/.SpaceVim.d
   if not git clone git@bitbucket.org:jhessin/vim.git ~/.SpaceVim.d
     echo "git clone failed - ensure you have your key set up with bitbucket"
   end
