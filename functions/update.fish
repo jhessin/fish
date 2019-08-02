@@ -15,6 +15,12 @@ function update
     cp -v $file $HOME
   end
 
+  # install any missing packages
+  if test (uname) = 'Linux'
+    sudo apt update
+    sudo xargs -a $target/packages_list.txt apt install
+  end
+
   for dir in $repos
     if pushd $dir
       echo "updating $dir"

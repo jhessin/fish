@@ -12,6 +12,11 @@ function backup
     cp $file $HOME/.config/fish/backup/
   end
 
+  # backup all packages on linux
+  if test (uname) = 'Linux'
+    sudo dpkg-query -f '${binary:Package}\n' -W > $HOME/.config/fish/backup/packages_list.txt
+  end
+
   # backup this repo
   if pushd $HOME/.config/fish
     echo "saving fish config files"
