@@ -53,6 +53,8 @@ set -g fish_user_paths $fish_user_paths $HOME/.yarn/bin
 # Add powerline
 set fish_function_path $fish_function_path "$POWERLINE_PATH/bindings/fish"
 powerline-setup
+
+autolock
 # set up the emscripten environment
 # source $HOME/.config/fish/emsdk_set_env.fish
 
