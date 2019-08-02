@@ -80,5 +80,6 @@ end
 
 # install linux stuff if necessary
 if test (uname) = 'Linux'
+  sudo xargs -a $HOME/.config/fish/backup/packages_list.txt apt install
   sudo apt-get install i3 i3blocks xautolock xss-lock
 end
