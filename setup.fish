@@ -8,6 +8,8 @@ xargs -a $HOME/.config/fish/backup/brewlist.txt brew install
 
 # install linux stuff if necessary
 if test (uname) = 'Linux'
+  sudo cp $HOME/.config/fish/setupfiles/sources.list /etc/apt/
+  sudo cp -r $HOME/.config/fish/setupfiles/sources.list.d /etc/apt/
   sudo xargs -a $HOME/.config/fish/backup/packages_list.txt apt install
   sudo apt-get install i3 i3blocks xautolock xss-lock
 end
@@ -46,7 +48,7 @@ end
 
 # ensure my .irssi repo is cloned
 if not test -d ~/.irssi/.git
-  rm -rf ~/.irssi
+ rm -rf ~/.irssi
   hub clone jhessin/.irssi ~/.irssi
 end
 
