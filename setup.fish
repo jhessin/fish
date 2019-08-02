@@ -1,4 +1,8 @@
 
+# copy initial setup files
+sudo cp ~/.config/fish/setupfiles/keyboard /etc/default/keyboard
+sudo cp ~/.config/fish/setupfiles/initramfs.conf /etc/initramfs-tools/initramfs.conf
+
 # See if we need git and download if necessary
 if not test (type git)
   brew install git
