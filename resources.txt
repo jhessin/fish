@@ -1,0 +1,2 @@
+https://linuxize.com/post/how-to-list-installed-packages-on-debian/
+-- this site has some useful info on moving from one linux to another
