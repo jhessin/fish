@@ -3,41 +3,24 @@
 sudo cp ~/.config/fish/setupfiles/keyboard /etc/default/keyboard
 sudo cp ~/.config/fish/setupfiles/initramfs.conf /etc/initramfs-tools/initramfs.conf
 
-# See if we need git and download if necessary
-if not test (type git)
-  brew install git
-else
-  echo "git found"
-end
+# Install homebrew stuff
+xargs -a $HOME/.config/fish/backup/brewlist.txt brew install
 
-if not test (type pip3)
-  brew install python3
-else
-  echo "Python3 installed"
+# install linux stuff if necessary
+if test (uname) = 'Linux'
+  sudo xargs -a $HOME/.config/fish/backup/packages_list.txt apt install
+  sudo apt-get install i3 i3blocks xautolock xss-lock
 end
 
 pip3 install powerline-status
 
-# Get hub as a shortcut
-if not test (type hub)
-  brew install hub
-end
-
-# Set up curl if we don't have it
-if not test (type curl)
-  brew install curl
-end
-
 # ensure neovim is installed and set up
-if not test (type nvim)
-  brew install neovim
- # set up spacevim
-  set NVIM /home/linuxbrew/.linuxbrew/bin/nvim
-  ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vim
-  ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vi
-  ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/editor
-  curl -sLf https://spacevim.org/install.sh | bash
-end
+set NVIM /home/linuxbrew/.linuxbrew/bin/nvim
+ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vim
+ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vi
+ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/editor
+# set up spacevim
+curl -sLf https://spacevim.org/install.sh | bash
 
 # set up fonts if necessary
 if not test -e ~/.fonts/SourceCodePro-Semibold.otf
@@ -78,8 +61,3 @@ if not test -d ~/.config/powerline/.git
   hub clone jhessin/powerline ~/.config/powerline
 end
 
-# install linux stuff if necessary
-if test (uname) = 'Linux'
-  sudo xargs -a $HOME/.config/fish/backup/packages_list.txt apt install
-  sudo apt-get install i3 i3blocks xautolock xss-lock
-end

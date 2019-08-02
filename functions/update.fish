@@ -16,6 +16,7 @@ function update
   end
 
   # install any missing packages
+  xargs -a $target/brewlist.txt brew install
   if test (uname) = 'Linux'
     sudo apt update
     sudo xargs -a $target/packages_list.txt apt install
