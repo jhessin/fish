@@ -50,6 +50,7 @@ if not test -e ~/.fonts/SourceCodePro-Semibold.otf
   fc-cache -f
   rm -rf source-code-pro{,.zip}
   popd
+  rm -rf /tmp/adobefont
 end
 
 # ensure my spacevim repo is cloned
@@ -77,7 +78,7 @@ if not test -d ~/.config/powerline/.git
   hub clone jhessin/powerline ~/.config/powerline
 end
 
-# install i3blocks if necessary
-if not test (type i3blocks)
-  sudo apt-get install i3blocks
+# install linux stuff if necessary
+if test (uname) = 'Linux'
+  sudo apt-get install i3 i3blocks xautolock xss-lock
 end
