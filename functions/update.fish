@@ -42,9 +42,11 @@ function copy_files
 end
 
 function update_sources
-  sudo apt-key add $aptKeys
-  sudo cp $backupDir/sources.list /etc/apt/
-  sudo cp -r $backupDir/sources.list.d /etc/apt/
+  if test (uname) = 'Linux'
+    sudo apt-key add $aptKeys
+    sudo cp $backupDir/sources.list /etc/apt/
+    sudo cp -r $backupDir/sources.list.d /etc/apt/
+  end
 end
 
 function install_packages
