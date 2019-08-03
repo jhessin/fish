@@ -340,6 +340,7 @@ libauthen-sasl-perl
 libavahi-client3:amd64
 libavahi-common-data:amd64
 libavahi-common3:amd64
+libavahi-compat-libdnssd1:amd64
 libavahi-core7:amd64
 libavahi-glib1:amd64
 libavc1394-0:amd64
@@ -1433,6 +1434,8 @@ openjdk-11-jre:amd64
 openjdk-11-jre-headless:amd64
 openprinting-ppds
 openssh-client
+openssh-server
+openssh-sftp-server
 openssl
 orca
 os-prober
@@ -1567,10 +1570,12 @@ sound-theme-freedesktop
 speech-dispatcher
 speech-dispatcher-audio-plugins:amd64
 speech-dispatcher-espeak-ng
+ssh
 ssl-cert
 suckless-tools
 sudo
 synaptic
+synergy
 sysstat
 system-config-printer
 system-config-printer-common
