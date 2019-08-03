@@ -62,6 +62,9 @@ end
 
 function update
   update_this
+
+  source ~/.config/fish/files.fish
+
   copy_files
   update_sources
   install_packages

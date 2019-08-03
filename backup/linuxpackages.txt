@@ -102,6 +102,7 @@ doc-debian					install
 dosfstools					install
 dpkg						install
 dpkg-dev					install
+dselect						install
 dunst						install
 e2fsprogs					install
 eject						install
