@@ -63,5 +63,6 @@ end
 function update
   update_this
   copy_files
+  update_sources
   install_packages
 end
