@@ -2,7 +2,8 @@ set files
 set files $files $HOME/.gitconfig
 set -x files $files $HOME/.tmux.conf
 
-set -x linuxBrewList $HOME/.config/fish/backup/linuxbrewlist.txt
-set -x macBrewList $HOME/.config/fish/backup/macbrewlist.txt
-set -x linuxPackages $HOME/.config/fish/backup/linuxpackages.txt
-set -x aptKeys $HOME/.config/fish/backup/apt.keys
+set -x backupDir $HOME/.config/fish/backup
+set -x linuxBrewList $backupDir/linuxbrewlist.txt
+set -x macBrewList $backupDir/macbrewlist.txt
+set -x linuxPackages $backupDir/linuxpackages.txt
+set -x aptKeys $backupDir/apt.keys

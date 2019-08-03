@@ -35,6 +35,8 @@ function backup_this
 end
 
 function backup_keys
+  sudo cp /etc/apt/sources.list $backupDir
+  sudo cp -r /etc/apt/sources.list.d $backupDir
   sudo apt-key exportall > $aptKeys
 end
 
