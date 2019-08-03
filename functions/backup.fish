@@ -23,15 +23,6 @@ function backup_this
     gpush
     popd
   end
-
-  # then we backup extra repos
-  for dir in $repos
-    if pushd $dir
-      echo "saving $dir"
-      gpush
-      popd
-    end
-  end
 end
 
 function backup_keys
@@ -43,6 +34,27 @@ function backup_keys
 end
 
 function backup_others
+
+  # then we backup extra repos
+  for dir in $repos
+    if pushd $dir
+      echo "saving $dir"
+      gpush
+      popd
+    end
+  end
+
+  # backup linux only repos
+  if test (uname) = 'Linux'
+    for dir in $linuxRepos
+      if pushd $dir
+        echo "saving $dir"
+        gpush
+        popd
+      end
+    end
+  end
+
   # then we backup the github and bitbucket repos
   for dir in $HOME/Documents/github/*
     if pushd $dir

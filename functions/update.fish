@@ -24,6 +24,16 @@ function copy_files
     end
   end
 
+  if test (uname) = 'Linux'
+    for dir in $linuxRepos
+      if pushd $dir
+        echo "updating $dir"
+        gpull
+        popd
+      end
+    end
+  end
+
   for dir in $HOME/Documents/github/*
     if pushd $dir
       echo "updating $dir"
