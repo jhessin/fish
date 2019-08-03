@@ -41,12 +41,20 @@ function copy_files
   end
 end
 
+function update_sources
+  sudo apt-key add $aptKeys
+  sudo cp $backupDir/sources.list /etc/apt/
+  sudo cp -r $backupDir/sources.list.d /etc/apt/
+end
+
 function install_packages
   # install any missing packages
   if test (uname) = 'Linux'
     xargs -a $linuxBrewList brew install
     sudo apt update
-    sudo xargs -a $linuxPackages apt install
+    sudo apt install dselect
+    sudo dpkg --set-selections < $linuxPackages
+    sudo apt dselect-upgrade -y
   else
     cat $macBrewList | xargs brew install
   end

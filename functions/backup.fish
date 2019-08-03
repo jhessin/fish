@@ -12,7 +12,7 @@ function backup_this
   # backup all packages 
   if test (uname) = 'Linux'
     command brew list > $linuxBrewList
-    sudo dpkg-query -f '${binary:Package}\n' -W > $linuxPackages
+    dpkg --get-selections > $linuxPackages
   else
     command brew list > $macBrewList
   end
