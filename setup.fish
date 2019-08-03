@@ -1,31 +1,20 @@
+source ~/.config/fish/repos.fish
 
-# copy initial setup files
-sudo cp ~/.config/fish/setupfiles/keyboard /etc/default/keyboard
-sudo cp ~/.config/fish/setupfiles/initramfs.conf /etc/initramfs-tools/initramfs.conf
+# Start by seting up all the necessary repos
+setup_repos
 
-# Install homebrew stuff
-xargs -a $HOME/.config/fish/backup/brewlist.txt brew install
-
-# install linux stuff if necessary
-if test (uname) = 'Linux'
-  sudo cp $HOME/.config/fish/setupfiles/sources.list /etc/apt/
-  sudo cp -r $HOME/.config/fish/setupfiles/sources.list.d /etc/apt/
-  if test -d ~/Dropbox
-  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-  ~/.dropbox-dist/dropboxd
-end
-  sudo xargs -a $HOME/.config/fish/backup/packages_list.txt apt install
-end
-
-pip3 install powerline-status
+# then update them all (also installs programs
+update
 
 # ensure neovim is installed and set up
 set NVIM /home/linuxbrew/.linuxbrew/bin/nvim
 ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vim
 ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vi
 ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/editor
-# set up spacevim
-curl -sLf https://spacevim.org/install.sh | bash
+# set up spacevim (if necessary)
+if not test -d ~/.SpaceVim
+  curl -sLf https://spacevim.org/install.sh | bash
+end
 
 # set up fonts if necessary
 if not test -e ~/.fonts/SourceCodePro-Semibold.otf
@@ -39,30 +28,5 @@ if not test -e ~/.fonts/SourceCodePro-Semibold.otf
   rm -rf source-code-pro{,.zip}
   popd
   rm -rf /tmp/adobefont
-end
-
-# ensure my spacevim repo is cloned
-if not test -d ~/.SpaceVim.d/.git
-  rm -rf ~/.SpaceVim.d
-  if not git clone git@bitbucket.org:jhessin/vim.git ~/.SpaceVim.d
-    echo "git clone failed - ensure you have your key set up with bitbucket"
-  end
-end
-
-# ensure my .irssi repo is cloned
-if not test -d ~/.irssi/.git
- rm -rf ~/.irssi
-  hub clone jhessin/.irssi ~/.irssi
-end
-
-# ensure the .i3 is cloned and up to date
-if not test -d ~/.config/i3/.git
-  rm -rf ~/.config/i3
-  hub clone jhessin/i3 ~/.config/i3
-end
-
-if not test -d ~/.config/powerline/.git
-  rm -rf ~/.config/powerline
-  hub clone jhessin/powerline ~/.config/powerline
 end
 
