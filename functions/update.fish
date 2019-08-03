@@ -43,10 +43,12 @@ end
 
 function install_packages
   # install any missing packages
-  xargs -a $target/brewlist.txt brew install
   if test (uname) = 'Linux'
+    xargs -a $linuxBrewList brew install
     sudo apt update
-    sudo xargs -a $target/packages_list.txt apt install
+    sudo xargs -a $linuxPackages apt install
+  else
+    cat $macBrewList | xargs brew install
   end
 end
 
