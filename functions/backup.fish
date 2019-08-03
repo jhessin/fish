@@ -34,6 +34,10 @@ function backup_this
   end
 end
 
+function backup_keys
+  sudo apt-key exportall > $aptKeys
+end
+
 function backup_others
   # then we backup the github and bitbucket repos
   for dir in $HOME/Documents/github/*
@@ -58,6 +62,7 @@ function backup
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
 
+  backup_keys
   backup_this
   backup_others
 end
