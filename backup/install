@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [[ `uname` == 'Linux' ]]; then
-  xargs -a linuxbrewlist.txt brew install
-  sudo xargs -a linuxpackages.txt apt install
-else
-  cat macBrewList.txt | brew install
-fi
