@@ -8,9 +8,9 @@ update
 
 # ensure neovim is installed and set up
 set NVIM /home/linuxbrew/.linuxbrew/bin/nvim
-ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vim
-ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vi
-ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/editor
+ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vim 2> /dev/null
+ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/vi 2> /dev/null
+ln -s $NVIM /home/linuxbrew/.linuxbrew/bin/editor 2> /dev/null
 # set up spacevim (if necessary)
 if not test -d ~/.SpaceVim
   curl -sLf https://spacevim.org/install.sh | bash
