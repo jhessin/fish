@@ -27,6 +27,7 @@ harfbuzz
 hicolor-icon-theme
 hub
 icu4c
+intltool
 jemalloc
 jpeg
 libassuan

@@ -62,15 +62,15 @@ end
 function install_packages
   # install any missing packages
   if test (uname) = 'Linux'
-    xargs -a $linuxBrewList brew install
-    xargs -a $linuxBrewList brew upgrade
+    xargs -a $linuxBrewList brew install 2> /dev/null
+    xargs -a $linuxBrewList brew upgrade 2> /dev/null
     sudo apt-get update
     sudo apt-get install dselect
     sudo dpkg --set-selections < $linuxPackages
     sudo apt-get dselect-upgrade -y
   else
-    cat $macBrewList | xargs brew install
-    cat $macBrewList | xargs brew upgrade
+    cat $macBrewList | xargs brew install 2> /dev/null
+    cat $macBrewList | xargs brew upgrade 2> /dev/null
   end
 end
 
