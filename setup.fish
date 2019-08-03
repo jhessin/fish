@@ -10,8 +10,11 @@ xargs -a $HOME/.config/fish/backup/brewlist.txt brew install
 if test (uname) = 'Linux'
   sudo cp $HOME/.config/fish/setupfiles/sources.list /etc/apt/
   sudo cp -r $HOME/.config/fish/setupfiles/sources.list.d /etc/apt/
+  if test -d ~/Dropbox
+  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+  ~/.dropbox-dist/dropboxd
+end
   sudo xargs -a $HOME/.config/fish/backup/packages_list.txt apt install
-  sudo apt-get install i3 i3blocks xautolock xss-lock
 end
 
 pip3 install powerline-status

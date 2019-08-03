@@ -3,6 +3,7 @@ acpi
 adduser
 adwaita-icon-theme
 alsa-utils
+amd64-microcode
 anacron
 ant
 ant-contrib
@@ -101,7 +102,6 @@ doc-debian
 dosfstools
 dpkg
 dpkg-dev
-dropbox
 dunst
 e2fsprogs
 eject
@@ -123,8 +123,11 @@ firebird3.0-common-doc
 firebird3.0-server-core:amd64
 firebird3.0-utils
 firefox-esr
+firmware-amd-graphics
 firmware-iwlwifi
 firmware-linux-free
+firmware-linux-nonfree
+firmware-misc-nonfree
 fontconfig
 fontconfig-config
 fonts-crosextra-caladea
@@ -133,6 +136,7 @@ fonts-dejavu
 fonts-dejavu-core
 fonts-dejavu-extra
 fonts-droid-fallback
+fonts-freefont-ttf
 fonts-liberation
 fonts-linuxlibertine
 fonts-noto-core
@@ -255,6 +259,7 @@ initramfs-tools
 initramfs-tools-core
 installation-report
 intel-media-va-driver:amd64
+intel-microcode
 iproute2
 iptables
 iputils-ping
@@ -262,6 +267,7 @@ isc-dhcp-client
 isc-dhcp-common
 iso-codes
 ispell
+iucode-tool
 iw
 java-common
 javascript-common
@@ -272,6 +278,7 @@ kmod
 krb5-locales
 laptop-detect
 less
+liba52-0.7.4:amd64
 libaa1:amd64
 libaacs0:amd64
 libabw-0.1-1:amd64
@@ -299,6 +306,7 @@ libapt-pkg5.0:amd64
 libarchive13:amd64
 libargon2-1:amd64
 libargs4j-java
+libaribb24-0:amd64
 libasan5:amd64
 libasm-java
 libasound2:amd64
@@ -346,6 +354,7 @@ libayatana-ido3-0.4-0:amd64
 libayatana-indicator3-7:amd64
 libbabl-0.1-0:amd64
 libbase-java
+libbasicusageenvironment1:amd64
 libbcmail-java
 libbcpkix-java
 libbcprov-java
@@ -400,6 +409,7 @@ libcap2:amd64
 libcap2-bin
 libcc1-0:amd64
 libccolamd2:amd64
+libcddb2
 libcdi-api-java
 libcdio-cdda2:amd64
 libcdio-paranoia2:amd64
@@ -479,10 +489,12 @@ libdrm-radeon1:amd64
 libdrm2:amd64
 libdtd-parser-java
 libdv4:amd64
+libdvbpsi10:amd64
 libdvdnav4:amd64
 libdvdread4:amd64
 libdw1:amd64
 libe-book-0.1-1:amd64
+libebml4v5:amd64
 libedit2:amd64
 libefiboot1:amd64
 libefivar1:amd64
@@ -625,6 +637,7 @@ libgpm2:amd64
 libgraphene-1.0-0:amd64
 libgraphite2-3:amd64
 libgraphite2-dev:amd64
+libgroupsock8:amd64
 libgs9:amd64
 libgs9-common
 libgsm1:amd64
@@ -719,6 +732,7 @@ libistack-commons-java
 libitext-java
 libitm1:amd64
 libiw30:amd64
+libixml10:amd64
 libjack-jackd2-0:amd64
 libjansi-java
 libjansi-native-java
@@ -766,6 +780,8 @@ libldap-common
 libldb1:amd64
 liblightdm-gobject-1-0:amd64
 liblilv-0-0:amd64
+liblirc-client0:amd64
+liblivemedia64:amd64
 libllvm7:amd64
 liblmdb0:amd64
 libloader-java
@@ -787,11 +803,13 @@ liblwres161:amd64
 liblz4-1:amd64
 liblzma5:amd64
 liblzo2-2:amd64
+libmad0:amd64
 libmagic-mgc
 libmagic1:amd64
 libmail-java
 libmailtools-perl
 libmariadb3:amd64
+libmatroska6v5:amd64
 libmaven-file-management-java
 libmaven-parent-java
 libmaven-resolver-java
@@ -804,6 +822,7 @@ libmenu-cache-bin
 libmenu-cache3:amd64
 libmetis5:amd64
 libmhash2:amd64
+libmicrodns0:amd64
 libminiupnpc17:amd64
 libmjpegutils-2.1-0
 libmm-glib0:amd64
@@ -816,6 +835,7 @@ libmp3lame0:amd64
 libmpc3:amd64
 libmpcdec6:amd64
 libmpdec2:amd64
+libmpeg2-4:amd64
 libmpeg2encpp-2.1-0
 libmpfr6:amd64
 libmpg123-0:amd64
@@ -876,6 +896,7 @@ libopenal1:amd64
 libopenexr23:amd64
 libopengl0:amd64
 libopenjp2-7:amd64
+libopenmpt-modplug1:amd64
 libopenmpt0:amd64
 libopus0:amd64
 liborc-0.4-0:amd64
@@ -923,6 +944,7 @@ libpipeline1:amd64
 libpixie-java
 libpixman-1-0:amd64
 libpixman-1-dev:amd64
+libplacebo7:amd64
 libplexus-archiver-java
 libplexus-cipher-java
 libplexus-classworlds-java
@@ -946,6 +968,7 @@ libpostproc55:amd64
 libpq5:amd64
 libprocps7:amd64
 libprotobuf-c1:amd64
+libprotobuf-lite17:amd64
 libproxy1v5:amd64
 libpsl5:amd64
 libpthread-stubs0-dev:amd64
@@ -980,6 +1003,7 @@ libqt5svg5:amd64
 libqt5webchannel5:amd64
 libqt5webkit5:amd64
 libqt5widgets5:amd64
+libqt5x11extras5:amd64
 libqt5xml5:amd64
 libquadmath0:amd64
 libqxp-0.0-0
@@ -1020,6 +1044,7 @@ libreoffice-style-tango
 libreoffice-wiki-publisher
 libreoffice-writer
 librepository-java
+libresid-builder0c2a
 librest-0.7-0:amd64
 librevenge-0.0-0:amd64
 librngom-java
@@ -1037,6 +1062,7 @@ libsasl2-modules:amd64
 libsasl2-modules-db:amd64
 libsaxonhe-java
 libsbc1:amd64
+libsdl-image1.2:amd64
 libsdl1.2debian:amd64
 libsdl2-2.0-0:amd64
 libseccomp2:amd64
@@ -1056,6 +1082,7 @@ libservlet-api-java
 libservlet3.1-java
 libshine3:amd64
 libshout3:amd64
+libsidplay2
 libsigc++-2.0-0v5:amd64
 libsigsegv2:amd64
 libsisu-guice-java
@@ -1083,6 +1110,7 @@ libsoup-gnome2.4-1:amd64
 libsoup2.4-1:amd64
 libsoxr0:amd64
 libspandsp2:amd64
+libspatialaudio0:amd64
 libspectre1:amd64
 libspeechd2:amd64
 libspeex1:amd64
@@ -1142,7 +1170,9 @@ libumfpack5:amd64
 libunique-1.0-0
 libunistring2:amd64
 libunwind8:amd64
+libupnp13:amd64
 liburi-perl
+libusageenvironment3:amd64
 libusb-0.1-4:amd64
 libusb-1.0-0:amd64
 libusbmuxd4:amd64
@@ -1160,6 +1190,9 @@ libvdpau1:amd64
 libvidstab1.1:amd64
 libvisio-0.1-1:amd64
 libvisual-0.4-0:amd64
+libvlc-bin:amd64
+libvlc5:amd64
+libvlccore9:amd64
 libvo-aacenc0:amd64
 libvo-amrwbenc0:amd64
 libvolume-key1
@@ -1244,6 +1277,7 @@ libxcb-xfixes0-dev:amd64
 libxcb-xinerama0:amd64
 libxcb-xkb1:amd64
 libxcb-xrm0:amd64
+libxcb-xv0:amd64
 libxcb1:amd64
 libxcb1-dev:amd64
 libxcomposite-dev:amd64
@@ -1585,6 +1619,18 @@ vdpau-driver-all:amd64
 vim-common
 vim-tiny
 vivaldi-stable
+vlc
+vlc-bin
+vlc-data
+vlc-l10n
+vlc-plugin-base:amd64
+vlc-plugin-notify:amd64
+vlc-plugin-qt:amd64
+vlc-plugin-samba:amd64
+vlc-plugin-skins2:amd64
+vlc-plugin-video-output:amd64
+vlc-plugin-video-splitter:amd64
+vlc-plugin-visualization:amd64
 wamerican
 wayland-protocols
 wget
