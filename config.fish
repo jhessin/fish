@@ -62,3 +62,4 @@ set -gx ANDROID_HOME "$HOME/Android/Sdk"
 
 # Setup PKG_CONFIG_PATH
 set PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/lib/x86_64-linux-gnu/pkgconfig
+set -gx PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/local/Cellar/libffi/3.2.1/lib/pkgconfig
