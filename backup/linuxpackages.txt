@@ -109,6 +109,7 @@ dunst						install
 e2fsprogs					install
 eject						install
 emacsen-common					install
+emby-server					install
 enchant						install
 enpass						install
 espeak-ng-data:amd64				install
