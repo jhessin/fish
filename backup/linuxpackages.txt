@@ -905,8 +905,6 @@ libogg0:amd64					install
 liboobs-1-5:amd64				install
 libopenal-data					install
 libopenal1:amd64				install
-libopencore-amrnb0:amd64			install
-libopencore-amrwb0:amd64			install
 libopenexr23:amd64				install
 libopengl0:amd64				install
 libopenjp2-7:amd64				install
@@ -1098,7 +1096,6 @@ libservlet-api-java				install
 libservlet3.1-java				install
 libshine3:amd64					install
 libshout3:amd64					install
-libsidplay1v5:amd64				install
 libsigc++-2.0-0v5:amd64				install
 libsigsegv2:amd64				install
 libsisu-guice-java				install
