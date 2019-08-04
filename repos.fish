@@ -1,9 +1,9 @@
 set -x repos $HOME/.SpaceVim.d/
 set -x repos $repos $HOME/.config/powerline
-set -x repos $repos ~/.config/i3status
 
 set -x linuxRepos $HOME/.irssi
 set -x linuxRepos $linuxRepos $HOME/.config/i3
+set -x linuxRepos $linuxRepos ~/.config/i3status
 
 function setup_repos
   if ! test -d $HOME/.SpaceVim.d/.git
