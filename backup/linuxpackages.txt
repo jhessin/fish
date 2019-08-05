@@ -29,6 +29,7 @@ bind9-host					install
 binutils					install
 binutils-common:amd64				install
 binutils-x86-64-linux-gnu			install
+blt						install
 bluetooth					install
 bluez						install
 bsdmainutils					install
@@ -143,6 +144,7 @@ fonts-droid-fallback				install
 fonts-freefont-ttf				purge
 fonts-liberation				install
 fonts-linuxlibertine				install
+fonts-lyx					install
 fonts-noto-core					install
 fonts-noto-mono					install
 fonts-noto-ui-core				install
@@ -176,7 +178,10 @@ gir1.2-atk-1.0:amd64				install
 gir1.2-atspi-2.0:amd64				install
 gir1.2-freedesktop:amd64			install
 gir1.2-gdkpixbuf-2.0:amd64			install
+gir1.2-ges-1.0:amd64				install
 gir1.2-glib-2.0:amd64				install
+gir1.2-gst-plugins-base-1.0:amd64		install
+gir1.2-gstreamer-1.0:amd64			install
 gir1.2-gtk-3.0:amd64				install
 gir1.2-gtk-vnc-2.0:amd64			install
 gir1.2-harfbuzz-0.0:amd64			install
@@ -227,6 +232,7 @@ grub2-common					install
 gsettings-desktop-schemas			install
 gsfonts						install
 gstreamer1.0-gl:amd64				install
+gstreamer1.0-gtk3:amd64				install
 gstreamer1.0-libav:amd64			install
 gstreamer1.0-plugins-bad:amd64			install
 gstreamer1.0-plugins-base:amd64			install
@@ -606,6 +612,7 @@ libgegl-common					install
 libgeoip1:amd64					install
 libgeronimo-annotation-1.3-spec-java		install
 libgeronimo-interceptor-3.0-spec-java		install
+libges-1.0-0					install
 libgexiv2-2:amd64				install
 libgfortran5:amd64				install
 libgif7:amd64					install
@@ -767,6 +774,7 @@ libjim0.77:amd64				install
 libjpeg-turbo-progs				install
 libjpeg62-turbo:amd64				install
 libjs-jquery					install
+libjs-jquery-ui					install
 libjson-c3:amd64				install
 libjson-glib-1.0-0:amd64			install
 libjson-glib-1.0-common				install
@@ -1495,6 +1503,7 @@ perl-openssl-defaults:amd64			install
 phantomjs					install
 pinentry-curses					install
 pinentry-gnome3					install
+pitivi						install
 pkg-config					install
 plymouth					install
 plymouth-label					install
@@ -1543,6 +1552,7 @@ python-cryptography				install
 python-enum34					install
 python-idna					install
 python-ipaddress				install
+python-matplotlib-data				install
 python-minimal					install
 python-openssl					install
 python-pkg-resources				install
@@ -1563,6 +1573,8 @@ python3-chardet					install
 python3-configobj				install
 python3-cups					install
 python3-cupshelpers				install
+python3-cycler					install
+python3-dateutil				install
 python3-dbus					install
 python3-debconf					install
 python3-debian					install
@@ -1571,13 +1583,17 @@ python3-distro					install
 python3-distutils				install
 python3-gi					install
 python3-gi-cairo				install
+python3-gst-1.0					install
 python3-httplib2				install
 python3-idna					install
+python3-kiwisolver				install
 python3-lib2to3					install
 python3-libvirt					install
 python3-libxml2:amd64				install
 python3-louis					install
+python3-matplotlib				install
 python3-minimal					install
+python3-numpy					install
 python3-olefile					install
 python3-pexpect					install
 python3-pil:amd64				install
@@ -1587,6 +1603,7 @@ python3-psutil					install
 python3-ptyprocess				install
 python3-pyatspi					install
 python3-pycurl					install
+python3-pyparsing				install
 python3-pysimplesoap				install
 python3-pyxattr					install
 python3-renderpm:amd64				install
@@ -1597,6 +1614,7 @@ python3-requests				install
 python3-six					install
 python3-smbc					install
 python3-speechd					install
+python3-tk:amd64				install
 python3-uno					install
 python3-urllib3					install
 python3-xdg					install
@@ -1659,9 +1677,11 @@ thin-provisioning-tools				install
 tix						install
 tk						install
 tk8.6						install
+tk8.6-blt2.5					install
 traceroute					install
 transmission-common				install
 transmission-gtk				install
+ttf-bitstream-vera				install
 tzdata						install
 ucf						install
 udev						install
