@@ -3,6 +3,7 @@ acpi						install
 adduser						install
 adwaita-icon-theme				install
 alsa-utils					install
+amd64-microcode					install
 anacron						install
 ant						install
 ant-contrib					install
@@ -135,8 +136,12 @@ firebird3.0-common-doc				install
 firebird3.0-server-core:amd64			install
 firebird3.0-utils				install
 firefox-esr					install
+firmware-amd-graphics				install
 firmware-iwlwifi				install
 firmware-linux-free				install
+firmware-linux-nonfree				install
+firmware-misc-nonfree				install
+flatpak						install
 fontconfig					install
 fontconfig-config				install
 fonts-crosextra-caladea				install
@@ -272,6 +277,7 @@ initramfs-tools					install
 initramfs-tools-core				install
 installation-report				install
 intel-media-va-driver:amd64			install
+intel-microcode					install
 iproute2					install
 iptables					install
 iputils-ping					install
@@ -279,6 +285,7 @@ isc-dhcp-client					install
 isc-dhcp-common					install
 iso-codes					install
 ispell						install
+iucode-tool					install
 iw						install
 java-common					install
 javascript-common				install
@@ -311,6 +318,7 @@ libapache-poi-java				install
 libapache-pom-java				install
 libapparmor1:amd64				install
 libappindicator3-1:amd64			install
+libappstream-glib8:amd64			install
 libappstream4:amd64				install
 libapt-inst2.0:amd64				install
 libapt-pkg5.0:amd64				install
@@ -937,6 +945,7 @@ libopus0:amd64					install
 liborc-0.4-0:amd64				install
 liborcus-0.14-0:amd64				install
 libosp5						install
+libostree-1-1:amd64				install
 libostyle1c2					install
 libp11-kit0:amd64				install
 libpackage-stash-perl				install
@@ -984,6 +993,7 @@ libpentaho-reporting-flow-engine-java		install
 libperl5.28:amd64				install
 libpgm-5.2-0:amd64				install
 libpipeline1:amd64				install
+libpipewire-0.2-1:amd64				install
 libpixie-java					install
 libpixman-1-0:amd64				install
 libpixman-1-dev:amd64				install
@@ -1168,6 +1178,7 @@ libsrtp2-1:amd64				install
 libss2:amd64					install
 libssh-gcrypt-4:amd64				install
 libssh2-1:amd64					install
+libssl-dev:amd64				install
 libssl1.1:amd64					install
 libstaroffice-0.0-0:amd64			install
 libstartup-notification0:amd64			install
@@ -1754,6 +1765,9 @@ xautolock					install
 xbitmaps					install
 xbrlapi						install
 xclip						install
+xdg-dbus-proxy					install
+xdg-desktop-portal				install
+xdg-desktop-portal-gtk				install
 xdg-user-dirs					install
 xdg-utils					install
 xdotool						install

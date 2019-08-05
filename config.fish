@@ -63,3 +63,7 @@ set -gx ANDROID_HOME "$HOME/Android/Sdk"
 # Setup PKG_CONFIG_PATH
 set PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/lib/x86_64-linux-gnu/pkgconfig
 set -gx PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/local/Cellar/libffi/3.2.1/lib/pkgconfig
+
+# set up XDG_DATA_DIRS
+set XDG_DATA_DIRS $XDG_DATA_DIRS '/var/lib/flatpak/exports/share'
+set -gx XDG_DATA_DIRS $XDG_DATA_DIRS '/home/jhessin/.local/share/flatpak/exports/share'
