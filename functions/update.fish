@@ -68,6 +68,10 @@ function install_packages
     xargs -a $linuxBrewList brew upgrade 2> /dev/null
     sudo apt-get update
     sudo apt-get install dselect
+    # This may work
+    sudo dselect update
+    # or I may need to use this instead
+    # apt-cache dumpavail | sudo dpkg --merge-avail
     sudo dpkg --set-selections < $linuxPackages
     sudo apt-get dselect-upgrade
   else
