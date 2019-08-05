@@ -53,6 +53,7 @@ end
 
 function update_sources
   if test (uname) = 'Linux'
+    echo "Updating Sources..."
     sudo apt-key add $aptKeys
     sudo cp $backupDir/sources.list /etc/apt/
     sudo cp -r $backupDir/sources.list.d /etc/apt/
@@ -62,12 +63,13 @@ end
 function install_packages
   # install any missing packages
   if test (uname) = 'Linux'
+    echo "Installing Packages"
     xargs -a $linuxBrewList brew install 2> /dev/null
     xargs -a $linuxBrewList brew upgrade 2> /dev/null
     sudo apt-get update
     sudo apt-get install dselect
     sudo dpkg --set-selections < $linuxPackages
-    sudo apt-get dselect-upgrade -y
+    sudo apt-get dselect-upgrade
   else
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
