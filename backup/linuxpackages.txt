@@ -9,7 +9,9 @@ ant						install
 ant-contrib					install
 ant-optional					install
 apparmor					install
+appstream					install
 apt						install
+apt-config-icons				install
 apt-listchanges					install
 apt-utils					install
 aptitude					install
@@ -37,6 +39,7 @@ binutils-x86-64-linux-gnu			install
 blt						install
 bluetooth					install
 bluez						install
+bolt						install
 bsdmainutils					install
 bsdutils					install
 bubblewrap					install
@@ -174,6 +177,8 @@ foomatic-db-compressed-ppds			install
 foomatic-db-engine				install
 freetype2-doc					install
 fuse						install
+fwupd						install
+fwupd-amd64-signed				install
 g++						install
 g++-8						install
 galculator					install
@@ -202,6 +207,7 @@ gir1.2-gstreamer-1.0:amd64			install
 gir1.2-gtk-3.0:amd64				install
 gir1.2-gtk-vnc-2.0:amd64			install
 gir1.2-harfbuzz-0.0:amd64			install
+gir1.2-javascriptcoregtk-4.0:amd64		install
 gir1.2-keybinder-3.0				install
 gir1.2-libosinfo-1.0:amd64			install
 gir1.2-libvirt-glib-1.0:amd64			install
@@ -210,9 +216,11 @@ gir1.2-packagekitglib-1.0			install
 gir1.2-pango-1.0:amd64				install
 gir1.2-polkit-1.0				install
 gir1.2-secret-1:amd64				install
+gir1.2-soup-2.4:amd64				install
 gir1.2-spiceclientglib-2.0:amd64		install
 gir1.2-spiceclientgtk-3.0:amd64			install
 gir1.2-vte-2.91:amd64				install
+gir1.2-webkit2-4.0:amd64			install
 gir1.2-wnck-3.0:amd64				install
 git						install
 git-man						install
@@ -226,6 +234,9 @@ gnome-disk-utility				install
 gnome-icon-theme				install
 gnome-keyring					install
 gnome-screenshot				install
+gnome-software					install
+gnome-software-common				install
+gnome-software-plugin-flatpak			install
 gnome-system-tools				install
 gnome-themes-extra:amd64			install
 gnome-themes-extra-data				install
@@ -436,6 +447,7 @@ libc6:amd64					install
 libc6-dev:amd64					install
 libcaca0:amd64					install
 libcacard0:amd64				install
+libcairo-gobject-perl				install
 libcairo-gobject2:amd64				install
 libcairo-perl					install
 libcairo-script-interpreter2:amd64		install
@@ -608,6 +620,7 @@ libfile-listing-perl				install
 libfile-mimeinfo-perl				install
 libfile-which-perl				install
 libflac8:amd64					install
+libflatpak0:amd64				install
 libflite1:amd64					install
 libfluidsynth1:amd64				install
 libflute-java					install
@@ -631,9 +644,11 @@ libfribidi-dev:amd64				install
 libfribidi0:amd64				install
 libfstrm0:amd64					install
 libfuse2:amd64					install
+libfwupd2:amd64					install
 libgail-common:amd64				install
 libgail18:amd64					install
 libgbm1:amd64					install
+libgcab-1.0-0:amd64				install
 libgcc-8-dev:amd64				install
 libgcc1:amd64					install
 libgck-1-0:amd64				install
@@ -669,6 +684,7 @@ libgladeui-common				install
 libglapi-mesa:amd64				install
 libgles1:amd64					install
 libgles2:amd64					install
+libglib-object-introspection-perl		install
 libglib-perl					install
 libglib2.0-0:amd64				install
 libglib2.0-bin					install
@@ -723,6 +739,10 @@ libgtk2-perl					install
 libgtk2.0-0:amd64				install
 libgtk2.0-bin					install
 libgtk2.0-common				install
+libgtk3-perl					install
+libgtkdatabox0					install
+libgtkdatabox0-glade				install
+libgtkdatabox0-libglade				install
 libgtkmm-3.0-1v5:amd64				install
 libgtksourceview-3.0-1:amd64			install
 libgtksourceview-3.0-common			install
@@ -806,6 +826,7 @@ libjansi-java					install
 libjansi-native-java				install
 libjansson4:amd64				install
 libjavascriptcoregtk-4.0-18:amd64		install
+libjavascriptcoregtk-4.0-dev:amd64		install
 libjaxb-api-java				install
 libjaxb-java					install
 libjaxen-java					install
@@ -1191,6 +1212,7 @@ libsm-dev:amd64					install
 libsm6:amd64					install
 libsmartcols1:amd64				install
 libsmbclient:amd64				install
+libsmbios-c2					install
 libsnappy-java					install
 libsnappy-jni					install
 libsnappy1v5:amd64				install
@@ -1205,6 +1227,7 @@ libsord-0-0:amd64				install
 libsoundtouch1:amd64				install
 libsoup-gnome2.4-1:amd64			install
 libsoup2.4-1:amd64				install
+libsoup2.4-dev:amd64				install
 libsoxr0:amd64					install
 libspandsp2:amd64				install
 libspecio-perl					install
@@ -1268,6 +1291,8 @@ libtk8.6:amd64					install
 libtommath1:amd64				install
 libtry-tiny-perl				install
 libtsan0:amd64					install
+libtss2-esys0					install
+libtss2-udev					install
 libturbojpeg0:amd64				install
 libtwolame0:amd64				install
 libtxw2-java					install
@@ -1311,8 +1336,8 @@ libvirt0:amd64					install
 libvisio-0.1-1:amd64				install
 libvisual-0.4-0:amd64				install
 libvlc-bin:amd64				install
-libvlc5:amd64					purge
-libvlccore9:amd64				purge
+libvlc5:amd64					install
+libvlccore9:amd64				install
 libvo-aacenc0:amd64				install
 libvo-amrwbenc0:amd64				install
 libvolume-key1					install
@@ -1337,6 +1362,7 @@ libwayland-egl1:amd64				install
 libwayland-server0:amd64			install
 libwbclient0:amd64				install
 libwebkit2gtk-4.0-37:amd64			install
+libwebkit2gtk-4.0-dev:amd64			install
 libwebp6:amd64					install
 libwebpdemux2:amd64				install
 libwebpmux3:amd64				install
@@ -1442,7 +1468,9 @@ libxml-parser-perl				install
 libxml-twig-perl				install
 libxml-xpathengine-perl				install
 libxml2:amd64					install
+libxml2-dev:amd64				install
 libxml2-utils					install
+libxmlb1:amd64					install
 libxmlbeans-java				install
 libxmlsec1:amd64				install
 libxmlsec1-nss:amd64				install
@@ -1679,6 +1707,7 @@ python3-debconf					install
 python3-debian					install
 python3-debianbts				install
 python3-distro					install
+python3-distro-info				install
 python3-distutils				install
 python3-gi					install
 python3-gi-cairo				install
@@ -1712,6 +1741,7 @@ python3-reportlab-accel:amd64			install
 python3-requests				install
 python3-six					install
 python3-smbc					install
+python3-software-properties			install
 python3-speechd					install
 python3-tk:amd64				install
 python3-uno					install
@@ -1753,6 +1783,8 @@ sgml-data					install
 sgmlspl						install
 shared-mime-info				install
 smplayer					install
+software-properties-common			install
+software-properties-gtk				install
 sound-icons					install
 sound-theme-freedesktop				install
 speech-dispatcher				install
@@ -1810,6 +1842,8 @@ tix						install
 tk						install
 tk8.6						install
 tk8.6-blt2.5					install
+tpm2-abrmd					install
+tpm2-tools					install
 traceroute					install
 transmission-common				install
 transmission-gtk				install
@@ -1818,6 +1852,7 @@ tzdata						install
 ucf						install
 udev						install
 udisks2						install
+unattended-upgrades				install
 uno-libs3					install
 unzip						install
 update-inetd					install
