@@ -49,6 +49,8 @@ bzip2						install
 ca-certificates					install
 ca-certificates-java				install
 clipit						install
+cmake						install
+cmake-data					install
 coinor-libcbc3					install
 coinor-libcgl1					install
 coinor-libclp1					install
@@ -125,7 +127,6 @@ dunst						install
 e2fsprogs					install
 eject						install
 emacsen-common					install
-emby-server					install
 enchant						install
 enpass						install
 espeak-ng-data:amd64				install
@@ -265,6 +266,7 @@ gstreamer1.0-libav:amd64			install
 gstreamer1.0-plugins-bad:amd64			install
 gstreamer1.0-plugins-base:amd64			install
 gstreamer1.0-plugins-good:amd64			install
+gstreamer1.0-plugins-ugly:amd64			install
 gstreamer1.0-pulseaudio:amd64			install
 gstreamer1.0-x:amd64				install
 gtk-update-icon-cache				install
@@ -325,6 +327,7 @@ kmod						install
 krb5-locales					install
 laptop-detect					install
 less						install
+liba52-0.7.4:amd64				install
 libaa1:amd64					install
 libaacs0:amd64					install
 libabw-0.1-1:amd64				install
@@ -684,6 +687,8 @@ libgladeui-common				install
 libglapi-mesa:amd64				install
 libgles1:amd64					install
 libgles2:amd64					install
+libgles2-mesa-dev:amd64				install
+libglew2.1:amd64				install
 libglib-object-introspection-perl		install
 libglib-perl					install
 libglib2.0-0:amd64				install
@@ -929,6 +934,7 @@ libmp3lame0:amd64				install
 libmpc3:amd64					install
 libmpcdec6:amd64				install
 libmpdec2:amd64					install
+libmpeg2-4:amd64				install
 libmpeg2encpp-2.1-0				install
 libmpfr6:amd64					install
 libmpg123-0:amd64				install
@@ -992,6 +998,8 @@ libogg0:amd64					install
 liboobs-1-5:amd64				install
 libopenal-data					install
 libopenal1:amd64				install
+libopencore-amrnb0:amd64			install
+libopencore-amrwb0:amd64			install
 libopenexr23:amd64				install
 libopengl0:amd64				install
 libopenjp2-7:amd64				install
@@ -1080,6 +1088,7 @@ libpotrace0:amd64				install
 libpq5:amd64					install
 libprocps7:amd64				install
 libprotobuf-c1:amd64				install
+libproxy-tools					install
 libproxy1v5:amd64				install
 libpsl5:amd64					install
 libptexenc1:amd64				install
@@ -1163,6 +1172,7 @@ libreoffice-writer				install
 librepository-java				install
 librest-0.7-0:amd64				install
 librevenge-0.0-0:amd64				install
+librhash0:amd64					install
 librngom-java					install
 librole-tiny-perl				install
 librsvg2-2:amd64				install
@@ -1200,6 +1210,7 @@ libservlet3.1-java				install
 libsgmls-perl					install
 libshine3:amd64					install
 libshout3:amd64					install
+libsidplay1v5:amd64				install
 libsigc++-2.0-0v5:amd64				install
 libsigsegv2:amd64				install
 libsisu-guice-java				install
@@ -1316,6 +1327,7 @@ libusbredirparser1:amd64			install
 libuser1					install
 libutempter0:amd64				install
 libuuid1:amd64					install
+libuv1:amd64					install
 libv4l-0:amd64					install
 libv4lconvert0:amd64				install
 libva-drm2:amd64				install
@@ -1421,6 +1433,7 @@ libxcb-util0:amd64				install
 libxcb-xfixes0:amd64				install
 libxcb-xfixes0-dev:amd64			install
 libxcb-xinerama0:amd64				install
+libxcb-xkb-dev:amd64				install
 libxcb-xkb1:amd64				install
 libxcb-xrm0:amd64				install
 libxcb1:amd64					install
@@ -1568,6 +1581,7 @@ mawk						install
 menu						install
 menu-xdg					install
 mesa-common-dev:amd64				install
+mesa-utils					install
 mesa-va-drivers:amd64				install
 mesa-vdpau-drivers:amd64			install
 mime-support					install
@@ -1796,7 +1810,6 @@ ssl-cert					install
 suckless-tools					install
 sudo						install
 synaptic					install
-synergy						install
 sysstat						install
 system-config-printer				install
 system-config-printer-common			install
@@ -1881,14 +1894,6 @@ vivaldi-stable					install
 vlc-bin						install
 vlc-data					install
 vlc-l10n					install
-vlc-plugin-base:amd64				deinstall
-vlc-plugin-notify:amd64				deinstall
-vlc-plugin-qt:amd64				deinstall
-vlc-plugin-samba:amd64				deinstall
-vlc-plugin-skins2:amd64				deinstall
-vlc-plugin-video-output:amd64			deinstall
-vlc-plugin-video-splitter:amd64			deinstall
-vlc-plugin-visualization:amd64			deinstall
 wamerican					install
 wayland-protocols				install
 wget						install
