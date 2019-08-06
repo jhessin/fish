@@ -5,6 +5,7 @@
 	email = jhessin@gmail.com
 [core]
 	editor = nvim
+  pager = less
 [push]
   default = upstream
 [difftool]
