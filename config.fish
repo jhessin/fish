@@ -67,3 +67,6 @@ set -gx PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/local/Cellar/libffi/3.2.1/lib/pkgc
 # set up XDG_DATA_DIRS
 set XDG_DATA_DIRS $XDG_DATA_DIRS '/var/lib/flatpak/exports/share'
 set -gx XDG_DATA_DIRS $XDG_DATA_DIRS '/home/jhessin/.local/share/flatpak/exports/share'
+
+# set RUST_SRC_PATH
+set -gx RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
