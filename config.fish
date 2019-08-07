@@ -70,3 +70,5 @@ set -gx XDG_DATA_DIRS $XDG_DATA_DIRS '/home/jhessin/.local/share/flatpak/exports
 
 # set RUST_SRC_PATH
 set -gx RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
+
+set -gx LIBGL_ALWAYS_SOFTWARE 1
