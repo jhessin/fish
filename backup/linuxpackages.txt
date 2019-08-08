@@ -719,6 +719,8 @@ libgles1:amd64					install
 libgles2:amd64					install
 libgles2-mesa-dev:amd64				install
 libglew2.1:amd64				install
+libglfw3:amd64					install
+libglfw3-dev:amd64				install
 libglib-object-introspection-perl		install
 libglib-perl					install
 libglib2.0-0:amd64				install
