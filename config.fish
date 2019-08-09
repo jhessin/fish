@@ -50,6 +50,9 @@ set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
 # Add yarn and it's installs to the path
 set -g fish_user_paths $fish_user_paths $HOME/.yarn/bin
 
+# Add SDKMAN
+set -g fish_user_paths $fish_user_paths (find ~/.sdkman/candidates/*/current/bin -maxdepth 0) ~/.sdkman/bin
+
 # Add powerline
 set fish_function_path $fish_function_path "$POWERLINE_PATH/bindings/fish"
 powerline-setup
@@ -72,3 +75,6 @@ set -gx XDG_DATA_DIRS $XDG_DATA_DIRS '/home/jhessin/.local/share/flatpak/exports
 set -gx RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 
 set -gx LIBGL_ALWAYS_SOFTWARE 1
+
+set -gx SDKMAN_DIR /home/jhessin/.sdkman
+
