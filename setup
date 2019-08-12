@@ -41,7 +41,7 @@ fi
 # clone the initial repo
 if [[ ! -d $HOME/.config/fish/.git ]]; then
   rm -rf $HOME/.config/fish
-  git clone git@github:jhessin/fish.git $HOME/.config/fish
+  git clone git@github.com:jhessin/fish.git $HOME/.config/fish
 fi
 
 fish $HOME/.config/fish/setup.fish
