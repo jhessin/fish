@@ -7,7 +7,7 @@ if [[ `uname` == 'Linux' ]]; then
     sudo apt-get install aptitude
   fi
   if [[ ! `type brew` ]]; then
-    if [[ -f /home/linuxbrew/.linuxbrew/bin ]]; then
+    if [[ -d /home/linuxbrew/.linuxbrew/bin ]]; then
       echo "brew not in path - correcting"
       export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
     else
