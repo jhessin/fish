@@ -12,7 +12,7 @@ set LFS /mnt/lfs
 set -g fish_key_bindings fish_user_keybindings
 
 # set the default editor to nvim
-set -gx EDITOR nvim
+set -gx EDITOR /usr/bin/nvim
 
 # This is supposed to allow nvim to read man pages
 set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
@@ -34,6 +34,8 @@ else if test -d "$HOME/.local/lib/python3.7/site-packages"
   set -gx POWERLINE_PATH $HOME/.local/lib/python3.7/site-packages/powerline
 else if test -d "/home/linuxbrew/.linuxbrew/lib/python3.7/site-packages"
   set -gx POWERLINE_PATH /home/linuxbrew/.linuxbrew/lib/python3.7/site-packages/powerline
+else if test -d "/usr/lib/python3.7/site-packages"
+  set -gx POWERLINE_PATH /usr/lib/python3.7/site-packages/powerline
 end
 
 # Add homebrew and it's installs to the path
@@ -49,9 +51,6 @@ set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
 # Add yarn and it's installs to the path
 set -g fish_user_paths $fish_user_paths $HOME/.yarn/bin
-
-# Add SDKMAN
-set -g fish_user_paths $fish_user_paths (find ~/.sdkman/candidates/*/current/bin -maxdepth 0) ~/.sdkman/bin
 
 # Add powerline
 set fish_function_path $fish_function_path "$POWERLINE_PATH/bindings/fish"
@@ -75,6 +74,4 @@ set -gx XDG_DATA_DIRS $XDG_DATA_DIRS '/home/jhessin/.local/share/flatpak/exports
 set -gx RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 
 set -gx LIBGL_ALWAYS_SOFTWARE 1
-
-set -gx SDKMAN_DIR /home/jhessin/.sdkman
 
