@@ -1,3 +1,0 @@
-let l:bm_file_version = 1
-let l:bm_sessions = {'default': {'/home/jhessin/Documents/github/notes/gamefaqs/ffx-current.txt': [{'sign_idx': 9501, 'line_nr': 815, 'content': 'listen to the conversation between Wakka and Lulu.  Now go part toward the '},{'sign_idx': 9500, 'line_nr': 805, 'content': '|  -------o--------\                        S.S. Winno                       |'},],}}
-let l:bm_current_session = 'default'

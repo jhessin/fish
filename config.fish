@@ -12,7 +12,7 @@ set LFS /mnt/lfs
 set -g fish_key_bindings fish_user_keybindings
 
 # set the default editor to nvim
-set -gx EDITOR /usr/bin/nvim
+set -gx EDITOR /usr/bin/vim
 
 # This is supposed to allow nvim to read man pages
 set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
