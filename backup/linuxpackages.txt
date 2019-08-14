@@ -174,7 +174,6 @@ os-prober
 p7zip
 pacman
 palemoon-bin
-pamac-dev
 patch
 patchutils
 pciutils
