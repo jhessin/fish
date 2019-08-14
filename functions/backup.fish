@@ -6,7 +6,7 @@ function backup_this
     mkdir $target
   end
   for file in $files
-    cp $file $HOME/.config/fish/backup/
+    cp -v $file $HOME/.config/fish/backup/
   end
 
   # backup all packages 
