@@ -51,29 +51,11 @@ function copy_files
   end
 end
 
-function update_sources
-  if test (uname) = 'Linux'
-    echo "Updating Sources..."
-    sudo apt-key add $aptKeys
-    sudo cp $backupDir/sources.list /etc/apt/
-    sudo cp -r $backupDir/sources.list.d /etc/apt/
-  end
-end
-
 function install_packages
   # install any missing packages
   if test (uname) = 'Linux'
     echo "Installing Packages"
-    xargs -a $linuxBrewList brew install 2> /dev/null
-    xargs -a $linuxBrewList brew upgrade 2> /dev/null
-    sudo apt-get update
-    sudo apt-get install dselect
-    # This may work
-    sudo dselect update
-    # or I may need to use this instead
-    # apt-cache dumpavail | sudo dpkg --merge-avail
-    sudo dpkg --set-selections < $linuxPackages
-    sudo apt-get dselect-upgrade
+    sudo yay -S --needed --noconfirm - < $linuxPackages
   else
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
@@ -86,6 +68,5 @@ function update
   source ~/.config/fish/files.fish
 
   copy_files
-  update_sources
   install_packages
 end

@@ -11,8 +11,7 @@ function backup_this
 
   # backup all packages 
   if test (uname) = 'Linux'
-    command brew list > $linuxBrewList
-    dpkg --get-selections > $linuxPackages
+    pacman -Qqe > $linuxPackages
   else
     command brew list > $macBrewList
   end
@@ -22,14 +21,6 @@ function backup_this
     echo "saving fish config files"
     gpush
     popd
-  end
-end
-
-function backup_keys
-  if test (uname) = 'Linux'
-    sudo cp /etc/apt/sources.list $backupDir
-    sudo cp -r /etc/apt/sources.list.d $backupDir
-    sudo apt-key exportall > $aptKeys
   end
 end
 
@@ -78,7 +69,6 @@ function backup
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
 
-  backup_keys
   backup_this
   backup_others
 end

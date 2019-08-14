@@ -1,4 +1,0 @@
-function wifi
-  nmtui
-end
-
