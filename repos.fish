@@ -1,3 +1,4 @@
+set -x repos $HOME/.SpaceVim.d
 set -x repos $repos $HOME/.config/powerline
 
 set -x linuxRepos $HOME/.irssi
@@ -5,6 +6,11 @@ set -x linuxRepos $linuxRepos $HOME/.config/i3
 set -x linuxRepos $linuxRepos ~/.config/i3status
 
 function setup_repos
+  if not test -d $HOME/.SpaceVim.d/.git
+    rm -rf $HOME/.Spacevim.d
+    git clone git@bitbucket.org:jhessin/vim.git $HOME/.SpaceVim.d
+  end
+
   if not test -d ~/.config/powerline/.git
     rm -rf ~/.config/powerline
     hub clone jhessin/powerline ~/.config/powerline
