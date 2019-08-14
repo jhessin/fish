@@ -7,7 +7,7 @@ set -x linuxRepos $linuxRepos ~/.config/i3status
 
 function setup_repos
   if not test -d $HOME/.SpaceVim.d/.git
-    rm -rf $HOME/.Spacevim.d
+    rm -rf $HOME/.SpaceVim.d
     git clone git@bitbucket.org:jhessin/vim.git $HOME/.SpaceVim.d
   end
 
