@@ -4,6 +4,7 @@ acpid
 alsa-firmware
 alsa-plugins
 alsa-utils
+amd-ucode
 arandr
 artwork-i3
 autoconf
@@ -39,6 +40,7 @@ downgrade
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+emby-server
 enpass-bin
 epdfview
 etcher
@@ -116,6 +118,7 @@ lightdm-settings
 lightdm-slick-greeter
 linux-firmware
 linux419
+linux419-r8168
 lldb
 logrotate
 lsb-release
@@ -174,6 +177,7 @@ os-prober
 p7zip
 pacman
 palemoon-bin
+pamac-dev
 patch
 patchutils
 pciutils
@@ -184,10 +188,12 @@ pkgconf
 pkgfile
 polkit-gnome
 poppler-data
+powerline-fonts-git
 powertop
 procps-ng
 psmisc
 pygtk
+pypy3
 python-neovim
 python-pip
 python-powerline-git
@@ -216,6 +222,7 @@ tar
 terminus-font
 termite
 texinfo
+tk
 tlp
 tmux
 tree
