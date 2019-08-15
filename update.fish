@@ -48,8 +48,8 @@ function install_packages
   # install any missing packages
   if test (uname) = 'Linux'
     echo "Installing Packages"
-    yay -Syyu --noconfirm
-    yay -S --needed --noconfirm - < $linuxPackages
+    yay -Syu --noconfirm
+    yay -Sy --needed --noconfirm - < $linuxPackages
   else
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null

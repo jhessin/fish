@@ -10,10 +10,12 @@ function backup_this
   end
 
   # backup all packages 
-  if test (uname) = 'Linux'
-    pacman -Qqe > $linuxPackages
-  else
-    command brew list > $macBrewList
+  if test -n "$argv" -a "$argv" = packages
+    if test (uname) = 'Linux'
+      pacman -Qqe > $linuxPackages
+    else
+      command brew list > $macBrewList
+    end
   end
 
   # backup this repo
@@ -69,6 +71,6 @@ function backup
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
 
-  backup_this
+  backup_this $argv
   backup_others
 end
