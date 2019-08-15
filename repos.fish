@@ -38,4 +38,6 @@ function setup_repos
       hub clone jhessin/i3status ~/.config/i3status
     end
   end
+  mkdir ~/Documents/bitbucket
+  mkdir ~/Documents/github
 end

@@ -40,7 +40,7 @@ downgrade
 e2fsprogs
 ecryptfs-utils
 efibootmgr
-emby-server
+emby-server-beta
 enpass-bin
 epdfview
 etcher
@@ -67,6 +67,7 @@ git
 gksu-polkit
 glibc
 gnome-keyring
+google-chrome
 gparted
 grep
 grub
