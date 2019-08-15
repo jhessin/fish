@@ -40,6 +40,8 @@ downgrade
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+emby-server
+enpass-bin
 epdfview
 etcher
 exfat-utils
@@ -50,6 +52,7 @@ ffmpegthumbnailer
 file
 filesystem
 findutils
+firefox
 fish
 flac
 flex
@@ -86,6 +89,7 @@ gzip
 haveged
 hexchat
 htop
+hub
 inetutils
 inxi
 iproute2
@@ -182,11 +186,13 @@ powertop
 procps-ng
 psmisc
 pygtk
+python-powerline-git
 qt5-styleplugins
 qt5ct
 ranger
 reiserfsprogs
 rsync
+rustup
 s-nail
 sbxkb
 screenfetch
@@ -202,6 +208,7 @@ systemd-fsck-silent
 systemd-sysvcompat
 tar
 terminus-font
+termite
 texinfo
 tlp
 tree
