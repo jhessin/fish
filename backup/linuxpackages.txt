@@ -4,7 +4,6 @@ acpid
 alsa-firmware
 alsa-plugins
 alsa-utils
-amd-ucode
 arandr
 artwork-i3
 autoconf
@@ -40,7 +39,6 @@ downgrade
 e2fsprogs
 ecryptfs-utils
 efibootmgr
-emby-server-beta
 enpass-bin
 epdfview
 etcher
@@ -52,8 +50,8 @@ ffmpegthumbnailer
 file
 filesystem
 findutils
-firefox
 fish
+fisherman
 flac
 flex
 gawk
@@ -61,13 +59,13 @@ gcc
 gcc-libs
 gcolor2
 gconf
+gdb
 gettext
 gimp
 git
 gksu-polkit
 glibc
 gnome-keyring
-google-chrome
 gparted
 grep
 grub
@@ -92,6 +90,7 @@ hexchat
 htop
 hub
 inetutils
+intel-ucode
 inxi
 iproute2
 iptables
@@ -117,7 +116,7 @@ lightdm-settings
 lightdm-slick-greeter
 linux-firmware
 linux419
-linux419-r8168
+lldb
 logrotate
 lsb-release
 lvm2
@@ -156,6 +155,7 @@ morc_menu
 mousepad
 nano
 ncdu
+neovim
 netctl
 network-manager-applet
 networkmanager
@@ -181,13 +181,18 @@ pcmanfm
 perl
 perl-file-mimeinfo
 pkgconf
+pkgfile
 polkit-gnome
 poppler-data
 powertop
 procps-ng
 psmisc
 pygtk
+python-neovim
+python-pip
 python-powerline-git
+python2-psutil
+python2-pygit2
 qt5-styleplugins
 qt5ct
 ranger
@@ -212,6 +217,7 @@ terminus-font
 termite
 texinfo
 tlp
+tmux
 tree
 ttf-bitstream-vera
 ttf-dejavu
@@ -227,6 +233,7 @@ vi
 vibrancy-icons-teal
 viewnior
 vim
+vivaldi
 vlc
 volumeicon
 vulkan-intel
@@ -238,6 +245,7 @@ wmutils
 wpa_supplicant
 xarchiver
 xautolock
+xclip
 xcursor-chameleon-pearl
 xcursor-maia
 xdg-su
