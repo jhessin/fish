@@ -4,7 +4,7 @@
 	name = Jim Hessin
 	email = jhessin@gmail.com
 [core]
-	editor = nvim
+	editor = vim
   pager = less
 [push]
   default = upstream

@@ -40,8 +40,6 @@ downgrade
 e2fsprogs
 ecryptfs-utils
 efibootmgr
-emby-server
-enpass-bin
 epdfview
 etcher
 exfat-utils
@@ -53,7 +51,6 @@ file
 filesystem
 findutils
 fish
-fisherman
 flac
 flex
 gawk
@@ -61,7 +58,6 @@ gcc
 gcc-libs
 gcolor2
 gconf
-gdb
 gettext
 gimp
 git
@@ -90,9 +86,7 @@ gzip
 haveged
 hexchat
 htop
-hub
 inetutils
-intel-ucode
 inxi
 iproute2
 iptables
@@ -119,7 +113,6 @@ lightdm-slick-greeter
 linux-firmware
 linux419
 linux419-r8168
-lldb
 logrotate
 lsb-release
 lvm2
@@ -158,7 +151,6 @@ morc_menu
 mousepad
 nano
 ncdu
-neovim
 netctl
 network-manager-applet
 networkmanager
@@ -184,26 +176,17 @@ pcmanfm
 perl
 perl-file-mimeinfo
 pkgconf
-pkgfile
 polkit-gnome
 poppler-data
-powerline-fonts-git
 powertop
 procps-ng
 psmisc
 pygtk
-pypy3
-python-neovim
-python-pip
-python-powerline-git
-python2-psutil
-python2-pygit2
 qt5-styleplugins
 qt5ct
 ranger
 reiserfsprogs
 rsync
-rustup
 s-nail
 sbxkb
 screenfetch
@@ -219,11 +202,8 @@ systemd-fsck-silent
 systemd-sysvcompat
 tar
 terminus-font
-termite
 texinfo
-tk
 tlp
-tmux
 tree
 ttf-bitstream-vera
 ttf-dejavu
@@ -239,7 +219,6 @@ vi
 vibrancy-icons-teal
 viewnior
 vim
-vivaldi
 vlc
 volumeicon
 vulkan-intel
@@ -251,7 +230,6 @@ wmutils
 wpa_supplicant
 xarchiver
 xautolock
-xclip
 xcursor-chameleon-pearl
 xcursor-maia
 xdg-su
