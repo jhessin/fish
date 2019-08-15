@@ -1,4 +1,6 @@
 
+source ~/.config/fish/files.fish
+
 function copy_files
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish

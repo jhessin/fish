@@ -9,7 +9,6 @@ end
 function update
   update_this
 
-  source ~/.config/fish/files.fish
   source ~/.config/fish/update.fish
 
   copy_files
