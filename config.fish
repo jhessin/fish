@@ -1,10 +1,3 @@
-#!/home/linuxbrew/.linuxbrew/bin/fish
-# add shortcuts and tools
-source $HOME/.config/fish/functions/shortcuts.fish
-
-# add homebrew paths
-
-
 # add the LFS path
 set LFS /mnt/lfs
 
