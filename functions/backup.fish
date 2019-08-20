@@ -6,14 +6,16 @@ function backup_this
     mkdir $target
   end
   for file in $files
-    cp $file $HOME/.config/fish/backup/
+    cp -v $file $HOME/.config/fish/backup/
   end
 
   # backup all packages 
-  if test (uname) = 'Linux'
-    pacman -Qqe > $linuxPackages
-  else
-    command brew list > $macBrewList
+  if test -n "$argv" -a "$argv" = packages
+    if test (uname) = 'Linux'
+      pacman -Qqe > $linuxPackages
+    else
+      command brew list > $macBrewList
+    end
   end
 
   # backup this repo
@@ -69,6 +71,6 @@ function backup
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
 
-  backup_this
+  backup_this $argv
   backup_others
 end
