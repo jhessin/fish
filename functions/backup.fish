@@ -1,3 +1,14 @@
+function backup_packages
+
+  # backup all packages 
+  if test (uname) = 'Linux'
+    pacman -Qqe > $linuxPackages
+  else
+    command brew list > $macBrewList
+  end
+
+end
+
 function backup_this
  
   # copy backup files
@@ -9,16 +20,7 @@ function backup_this
     cp -v $file $HOME/.config/fish/backup/
   end
 
-  # backup all packages 
-  if test -n "$argv" -a "$argv" = packages
-    if test (uname) = 'Linux'
-      pacman -Qqe > $linuxPackages
-    else
-      command brew list > $macBrewList
-    end
-  end
-
-  # backup this repo
+ # backup this repo
   if pushd $HOME/.config/fish
     echo "saving fish config files"
     gpush
@@ -71,6 +73,9 @@ function backup
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
 
-  backup_this $argv
+  if test '$argv' = 'packages'
+    backup_packages
+  end
+  backup_this
   backup_others
 end
