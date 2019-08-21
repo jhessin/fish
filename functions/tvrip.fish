@@ -1,6 +1,6 @@
 function tvrip -a show first last season episode 
   set title $first
-  set path /run/media/jhessin/backups/HOME/Videos/TV
+  set path /run/media/jhessin/backups/Videos/TV
   mkdir -p $path/$show/Season_$season
   while test $title -lt (math $last + 1)
     if test $episode -lt 10
