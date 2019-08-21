@@ -1,4 +1,4 @@
 function cupsconfig
-  open http://localhost:631/
+  firefox http://localhost:631/
 end
 
