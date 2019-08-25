@@ -4,7 +4,6 @@ set -x repos $repos $HOME/.config/powerline
 
 set -x linuxRepos $HOME/.irssi
 set -x linuxRepos $linuxRepos $HOME/.config/i3
-set -x linuxRepos $linuxRepos ~/.config/i3status
 
 function setup_repos
   if not test -d $HOME/.SpaceVim.d/.git
@@ -32,12 +31,8 @@ function setup_repos
       rm -rf ~/.config/i3
       hub clone jhessin/i3 ~/.config/i3
     end
-
-    if not test -d ~/.config/i3status/.git
-      rm -rf ~/.config/i3status
-      hub clone jhessin/i3status ~/.config/i3status
-    end
   end
+
   mkdir ~/Documents/bitbucket
   mkdir ~/Documents/github
 end
