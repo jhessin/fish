@@ -5,6 +5,7 @@ set -ax repos $HOME/.config/powerline
 set linuxRepos $HOME/.irssi
 set -a linuxRepos $HOME/.config/i3
 set -a linuxRepos $HOME/.config/i3status
+set -a linuxRepos $HOME/.config/nitrogen
 set -ax linuxRepos $HOME/.config/conky
 
 function setup_repos
@@ -34,9 +35,22 @@ function setup_repos
       hub clone jhessin/i3 ~/.config/i3
     end
 
+    if not test -d ~/.config/nitrogen/.git
+      rm -rf ~/.config/nitrogen
+      hub clone jhessin/nitrogen ~/.config/nitrogen
+      pushd ~/.config/nitrogen
+      gfetch (hostname)
+      gpush -u origin (hostname)
+      popd
+    end
+
     if not test -d ~/.config/conky/.git
       rm -rf ~/.config/conky
       hub clone jhessin/conky ~/.config/conky
+      pushd ~/.config/conky
+      gfetch (hostname)
+      gpush -u origin (hostname)
+      popd
     end
 
     if not test -d ~/.config/i3status/.git
