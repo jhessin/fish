@@ -1,4 +1,5 @@
 set repos $HOME/.SpaceVim.d
+set -a repos $HOME/.local/bin
 set -ax repos $HOME/.config/powerline
 
 set linuxRepos $HOME/.irssi
@@ -12,6 +13,15 @@ function setup_repos
   if not test -d $HOME/.SpaceVim.d/.git
     rm -rf $HOME/.SpaceVim.d
     git clone git@bitbucket.org:jhessin/vim.git $HOME/.SpaceVim.d
+  end
+
+  if not test -d ~/.local/bin/.git
+    rm -rf ~/.local/bin
+    hub clone jhessin/bin ~/.local/bin
+    pushd ~/.local/bin
+    gfetch (hostname)
+    gpush -u origin (hostname)
+    popd
   end
 
   if not test -d ~/.config/powerline/.git
