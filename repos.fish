@@ -4,6 +4,7 @@ set -ax repos $HOME/.config/powerline
 
 set linuxRepos $HOME/.irssi
 set -a linuxRepos $HOME/.config/i3
+set -a linuxRepos $HOME/.config/i3status
 set -ax linuxRepos $HOME/.config/conky
 
 function setup_repos
@@ -36,6 +37,11 @@ function setup_repos
     if not test -d ~/.config/conky/.git
       rm -rf ~/.config/conky
       hub clone jhessin/conky ~/.config/conky
+    end
+
+    if not test -d ~/.config/i3status/.git
+      rm -rf ~/.config/i3status
+      hub clone jhessin/i3status ~/.config/i3status
     end
   end
 
