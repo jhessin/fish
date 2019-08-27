@@ -1,5 +1,5 @@
 function newscript
-  if set -q argv
+  if not count $argv > /dev/null
     echo "Usage: newscript scriptname"
     return 1
   end
