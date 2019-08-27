@@ -1,7 +1,7 @@
 function newscript
-  if not set -q argv
+  if set -q argv
     echo "Usage: newscript scriptname"
-    return
+    return 1
   end
   pushd ~/.local/bin
   git checkout master
