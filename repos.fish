@@ -1,10 +1,10 @@
 set repos $HOME/.SpaceVim.d
-set -a repos $HOME/.config/dmenu-recent
 set -ax repos $HOME/.config/powerline
 
 set linuxRepos $HOME/.irssi
 set -a linuxRepos $HOME/.config/i3
 set -a linuxRepos $HOME/.config/i3status
+set -a linuxRepos $HOME/.config/dmenu-recent
 set -a linuxRepos $HOME/.config/nitrogen
 set -ax linuxRepos $HOME/.config/conky
 
@@ -12,11 +12,6 @@ function setup_repos
   if not test -d $HOME/.SpaceVim.d/.git
     rm -rf $HOME/.SpaceVim.d
     git clone git@bitbucket.org:jhessin/vim.git $HOME/.SpaceVim.d
-  end
-
-  if not test -d $HOME/.config/dmenu-recent/.git
-    rm -rf $HOME/.config/dmenu-recent
-    hub clone jhessin/dmenu-recent $HOME/.config/dmenu-recent
   end
 
   if not test -d ~/.config/powerline/.git
@@ -28,6 +23,11 @@ function setup_repos
     if not test -d ~/.irssi/.git
       rm -rf ~/.irssi
       hub clone jhessin/.irssi ~/.irssi
+    end
+
+    if not test -d $HOME/.config/dmenu-recent/.git
+      rm -rf $HOME/.config/dmenu-recent
+      hub clone jhessin/dmenu-recent $HOME/.config/dmenu-recent
     end
 
     if not test -d ~/.config/i3/.git
@@ -56,6 +56,10 @@ function setup_repos
     if not test -d ~/.config/i3status/.git
       rm -rf ~/.config/i3status
       hub clone jhessin/i3status ~/.config/i3status
+      pushd ~/.config/i3status
+      gfetch (hostname)
+      gpush -u origin (hostname)
+      popd
     end
   end
 
