@@ -1,6 +1,9 @@
 function binpush
-  if not test \( (count '$argv') -ne 1 \) -a \( -x '$argv' \)
+  if test (count $argv) -ne 1 
     echo Usage: binpush path/to/new/executable
+    return 1
+  else if not test -x $argv
+    echo $argv is not an executable
     return 1
   end
 
