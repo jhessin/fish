@@ -1,5 +1,5 @@
 function gpull
-  git pull -a
+  git pull -t
 end
 
 
