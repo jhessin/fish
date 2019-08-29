@@ -1,4 +1,0 @@
-function disp-hd
-  xrandr --output VGA-0 --primary --mode 1024x768 --rate 60 --pos 0x0 --output DVI-0 --pos 1024x-312 --mode 1920x1080 --rate 60
-end
-

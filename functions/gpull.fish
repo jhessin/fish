@@ -1,5 +1,6 @@
 function gpull
-  git pull
+  git pull -t
+  git merge master
 end
 
 

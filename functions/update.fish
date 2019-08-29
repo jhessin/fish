@@ -12,7 +12,7 @@ function update
   source ~/.config/fish/update.fish
 
   copy_files
-  if test -n "$argv" -a "$argv" = packages
+  if test '$argv' = 'packages'
     install_packages
   end
 end

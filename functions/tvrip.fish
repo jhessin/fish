@@ -1,7 +1,7 @@
 function tvrip -a show first last season episode 
   set title $first
-  mkdir -p $HOME/Videos/TV/$show/Season_$season
-  set path /run/media/jhessin/backups/HOME/Videos/TV
+  set path /run/media/jhessin/backups/Videos/TV
+  mkdir -p $path/$show/Season_$season
   while test $title -lt (math $last + 1)
     if test $episode -lt 10
       HandBrakeCLI -Z "H.264 MKV 720p30" -t $title --subtitle-lang-list eng -i /dev/sr0 -o "$path/$show/Season_$season/$show-S$season-E0$episode.mkv"

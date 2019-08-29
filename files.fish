@@ -1,6 +1,6 @@
-set files
-set files $files $HOME/.gitconfig
-set -x files $files $HOME/.tmux.conf
+set -a files $HOME/.gitconfig
+set -a files $HOME/.profile
+set -ax files $HOME/.tmux.conf
 
 set -x backupDir $HOME/.config/fish/backup
 set -x linuxBrewList $backupDir/linuxbrewlist.txt
