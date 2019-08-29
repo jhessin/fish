@@ -12,7 +12,6 @@ function copy_files
     if pushd $dir
       echo "updating $dir"
       gpull
-      git merge master
       popd
     end
   end
@@ -22,7 +21,6 @@ function copy_files
       if pushd $dir
         echo "updating $dir"
         gpull
-        git merge master
         popd
       end
     end
@@ -32,7 +30,6 @@ function copy_files
     if pushd $dir
       echo "updating $dir"
       gpull
-      git merge master
       popd
     end
   end
@@ -41,7 +38,6 @@ function copy_files
     if pushd $dir
       echo "updating $dir"
       gpull
-      git merge master
       popd
     end
   end
