@@ -1,5 +1,8 @@
 function backup_packages
 
+  source $HOME/.config/fish/files.fish
+
+  echo "Backing up packages"
   # backup all packages 
   if test (uname) = 'Linux'
     pacman -Qqe > $linuxPackages
@@ -73,9 +76,13 @@ function backup
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
 
-  if test '$argv' = 'packages'
-    backup_packages
+  for option in $argv
+    switch "$option"
+      case -p --packages
+        backup_packages
+    end
   end
+
   backup_this
   backup_others
 end

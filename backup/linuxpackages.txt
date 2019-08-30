@@ -4,6 +4,7 @@ acpid
 alsa-firmware
 alsa-plugins
 alsa-utils
+amd-ucode
 arandr
 artwork-i3
 autoconf
@@ -18,8 +19,11 @@ bluez-utils
 bmenu
 btrfs-progs
 bzip2
+calibre
 cantarell-fonts
 clipit
+conky-lua-nv
+conky-manager
 coreutils
 cpupower
 crda
@@ -39,6 +43,7 @@ downgrade
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+emby-server
 enpass-bin
 epdfview
 etcher
@@ -52,7 +57,6 @@ filesystem
 findutils
 firefox
 fish
-fisherman
 flac
 flex
 gawk
@@ -60,7 +64,6 @@ gcc
 gcc-libs
 gcolor2
 gconf
-gdb
 gettext
 gimp
 git
@@ -91,7 +94,6 @@ hexchat
 htop
 hub
 inetutils
-intel-ucode
 inxi
 iproute2
 iptables
@@ -109,7 +111,6 @@ lib32-vulkan-intel
 lib32-vulkan-radeon
 libdvdcss
 libgpod
-libreoffice-fresh
 libtool
 libva-mesa-driver
 libva-vdpau-driver
@@ -118,7 +119,7 @@ lightdm-settings
 lightdm-slick-greeter
 linux-firmware
 linux419
-lldb
+linux419-r8168
 logrotate
 lsb-release
 lvm2
@@ -157,7 +158,6 @@ morc_menu
 mousepad
 nano
 ncdu
-neovim
 netctl
 network-manager-applet
 networkmanager
@@ -176,6 +176,7 @@ os-prober
 p7zip
 pacman
 palemoon-bin
+pamac-dev
 patch
 patchutils
 pciutils
@@ -183,18 +184,13 @@ pcmanfm
 perl
 perl-file-mimeinfo
 pkgconf
-pkgfile
 polkit-gnome
 poppler-data
 powertop
 procps-ng
 psmisc
 pygtk
-python-neovim
-python-pip
 python-powerline-git
-python2-psutil
-python2-pygit2
 qt5-styleplugins
 qt5ct
 ranger
@@ -210,6 +206,7 @@ spectre-meltdown-checker
 speedtest-cli
 subversion
 sudo
+synergy
 sysfsutils
 syslog-ng
 systemd-fsck-silent
@@ -218,8 +215,8 @@ tar
 terminus-font
 termite
 texinfo
+thunar-shares-plugin-gtk3
 tlp
-tmux
 tree
 ttf-bitstream-vera
 ttf-dejavu
@@ -227,7 +224,6 @@ ttf-droid
 ttf-inconsolata
 ttf-indic-otf
 ttf-liberation
-unzip
 upower
 usbutils
 util-linux
@@ -236,7 +232,6 @@ vi
 vibrancy-icons-teal
 viewnior
 vim
-vimiv
 vivaldi
 vlc
 volumeicon
@@ -249,7 +244,6 @@ wmutils
 wpa_supplicant
 xarchiver
 xautolock
-xclip
 xcursor-chameleon-pearl
 xcursor-maia
 xdg-su
