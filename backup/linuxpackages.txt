@@ -22,6 +22,7 @@ bzip2
 calibre
 cantarell-fonts
 clipit
+cmake
 conky-lua-nv
 conky-manager
 coreutils
@@ -29,6 +30,7 @@ cpupower
 crda
 cronie
 cryptsetup
+ctags
 deluge
 device-mapper
 dfc
