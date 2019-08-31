@@ -54,6 +54,8 @@ powerline-setup
 
 # add Android SDK path
 set -gx ANDROID_HOME "$HOME/Android/Sdk"
+set ANDROID_SDK_ROOT "/usr/local/share/android-sdk"
+set ANDROID_NDK_HOME "/usr/local/share/android-ndk"
 
 # Setup PKG_CONFIG_PATH
 set PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/lib/x86_64-linux-gnu/pkgconfig
