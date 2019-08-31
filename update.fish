@@ -50,6 +50,7 @@ function install_packages
     echo "Installing Packages"
     yay -Syu --noconfirm
     yay -Sy --needed --noconfirm - < $linuxPackages
+    yay -Sy --needed - < $linuxPackages
   else
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
