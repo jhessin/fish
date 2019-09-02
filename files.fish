@@ -1,6 +1,7 @@
 set -a files $HOME/.gitconfig
 set -a files $HOME/.profile
 set -a files $HOME/.synergy.conf
+set -a files $HOME/.rtorrent.rc
 set -ax files $HOME/.tmux.conf
 
 set -x backupDir $HOME/.config/fish/backup
