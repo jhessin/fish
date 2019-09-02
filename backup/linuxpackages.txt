@@ -5,6 +5,8 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
+android-studio
+android-tools
 arandr
 artwork-i3
 autoconf
@@ -174,6 +176,7 @@ networkmanager-openvpn
 networkmanager-pptp
 networkmanager-vpnc
 nfs-utils
+npm
 nss-mdns
 ntfs-3g
 ntp
@@ -183,7 +186,7 @@ openssh
 os-prober
 p7zip
 pacman
-palemoon-bin
+pamac-dev
 patch
 patchutils
 pciutils
@@ -201,13 +204,13 @@ pygtk
 python-neovim
 python-pip
 python-powerline-git
-python2-psutil
 python2-pygit2
 qt5-styleplugins
 qt5ct
 ranger
 reiserfsprogs
 rsync
+rtorrent
 rustup
 s-nail
 sbxkb
@@ -253,6 +256,7 @@ volumeicon
 vulkan-intel
 vulkan-radeon
 w3m
+watchman-git
 wget
 which
 wmutils
@@ -286,5 +290,6 @@ xorg-xinit
 xorg-xkill
 xorg-xprop
 xterm
+yarn
 yay
 zsh
