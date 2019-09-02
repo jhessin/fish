@@ -8,6 +8,8 @@ function copy_files
     cp -v $file $HOME
   end
 
+  cp $target/mimeapps.list $HOME/.config/mimeapps.list
+
   for dir in $repos
     if pushd $dir
       echo "updating $dir"
