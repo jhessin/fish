@@ -70,3 +70,8 @@ set -gx RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src
 
 set -gx LIBGL_ALWAYS_SOFTWARE 1
 
+# set media paths
+set -gx MEDIA /run/media/emby/backups
+set -gx MOVIES $MEDIA/Videos/Movies
+set -gx MUSIC $MEDIA/Music
+set -gx TV $MEDIA/Videos/TV
