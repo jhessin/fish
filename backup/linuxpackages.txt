@@ -95,6 +95,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
 gzip
+handbrake-cli
 haveged
 hexchat
 htop
@@ -131,6 +132,7 @@ linux419-r8168
 lldb
 logrotate
 lsb-release
+lsdvd
 lvm2
 lxappearance
 lxinput
