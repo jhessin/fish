@@ -188,7 +188,6 @@ openssh
 os-prober
 p7zip
 pacman
-pamac-dev
 patch
 patchutils
 pciutils
