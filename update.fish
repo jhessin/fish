@@ -50,7 +50,7 @@ function install_packages
   source ~/.config/fish/files.fish
   if test (uname) = 'Linux'
     echo "Installing Packages"
-    yay -Syu --noconfirm
+    yay
     yay -Sy --needed --noconfirm - < $linuxPackages
     yay -Sy --needed - < $linuxPackages
   else
