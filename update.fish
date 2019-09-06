@@ -51,7 +51,7 @@ function install_packages
   if test (uname) = 'Linux'
     echo "Installing Packages"
     yay
-    yay -Sy --needed --noconfirm - < $linuxPackages
+    # yay -Sy --needed --noconfirm - < $linuxPackages
     yay -Sy --needed - < $linuxPackages
   else
     cat $macBrewList | xargs brew install 2> /dev/null
