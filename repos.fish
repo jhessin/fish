@@ -1,5 +1,6 @@
 set repos $HOME/.SpaceVim.d
 set -a repos $HOME/.local/bin
+set -a repos $HOME/.config/termite
 set -ax repos $HOME/.config/powerline
 
 set linuxRepos $HOME/.irssi
@@ -43,6 +44,11 @@ function setup_repos
     if not test -d ~/.config/i3/.git
       rm -rf ~/.config/i3
       hub clone jhessin/i3 ~/.config/i3
+    end
+
+    if not test -d ~/.config/termite/.git
+      rm -rf ~/.config/termite
+      hub clone jhessin/termite ~/.config/termite
     end
 
     if not test -d ~/.config/nitrogen/.git
