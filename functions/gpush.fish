@@ -1,7 +1,8 @@
 function gpush
   git add .
   git commit
-  git push --all $argv
+  git push $argv
+  git push --all
 end
 
 
