@@ -21,7 +21,6 @@ function setup_repos
     hub clone jhessin/bin ~/.local/bin
     pushd ~/.local/bin
     gfetch (hostname)
-    gpush -u origin (hostname)
     popd
   end
 
@@ -35,7 +34,6 @@ function setup_repos
     hub clone jhessin/termite ~/.config/termite
     pushd ~/.config/termite
     gfetch (hostname)
-    gpush -u origin (hostname)
     popd
   end
 
@@ -60,7 +58,6 @@ function setup_repos
       hub clone jhessin/nitrogen ~/.config/nitrogen
       pushd ~/.config/nitrogen
       gfetch (hostname)
-      gpush -u origin (hostname)
       popd
     end
 
@@ -69,7 +66,6 @@ function setup_repos
       hub clone jhessin/conky ~/.config/conky
       pushd ~/.config/conky
       gfetch (hostname)
-      gpush -u origin (hostname)
       popd
     end
 
@@ -78,7 +74,6 @@ function setup_repos
       hub clone jhessin/i3status ~/.config/i3status
       pushd ~/.config/i3status
       gfetch (hostname)
-      gpush -u origin (hostname)
       popd
     end
   end
