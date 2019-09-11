@@ -100,6 +100,7 @@ haveged
 hexchat
 htop
 hub
+ifuse
 inetutils
 intel-ucode
 inxi
@@ -188,6 +189,7 @@ openssh
 os-prober
 p7zip
 pacman
+palemoon-bin
 patch
 patchutils
 pciutils
@@ -205,6 +207,7 @@ pygtk
 python-neovim
 python-pip
 python-powerline-git
+python2-psutil
 python2-pygit2
 qt5-styleplugins
 qt5ct
@@ -218,6 +221,7 @@ sbxkb
 screenfetch
 sed
 shadow
+shotwell
 spectre-meltdown-checker
 speedtest-cli
 subversion
@@ -228,6 +232,7 @@ syslog-ng
 systemd-fsck-silent
 systemd-sysvcompat
 tar
+teamviewer
 terminus-font
 termite
 texinfo
@@ -249,7 +254,6 @@ vertex-maia-themes
 vi
 vibrancy-icons-teal
 viewnior
-vim
 vimiv
 vivaldi
 vlc
