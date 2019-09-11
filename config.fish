@@ -76,4 +76,4 @@ set -gx MOVIES $MEDIA/Videos/Movies
 set -gx MUSIC $MEDIA/Music
 set -gx TV $MEDIA/Videos/TV
 
-set -gx VIMINIT "source ~/.config/vim/vimrc"
+set -gx VIMINIT "source ~/.config/nvim/init.vim"
