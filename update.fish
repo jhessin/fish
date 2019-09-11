@@ -1,13 +1,6 @@
-function sudoloop
-   $argv &
-   while test (pgrep $argv)
-     sudo sleep 5
-   end
- end
-
 function copy_files
   # first update all packages
-  sudoloop yay
+  yay --sudoloop
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish
   # copy backup files
@@ -60,7 +53,7 @@ function install_packages
   if test (uname) = 'Linux'
     echo "Installing Packages"
     # yay -Sy --needed --noconfirm - < $linuxPackages
-    sudoloop yay -Sy --needed - < $linuxPackages
+    yay -Sy --needed --sudoloop - < $linuxPackages
   else
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
