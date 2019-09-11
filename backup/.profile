@@ -9,3 +9,4 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . $POWERLINE_PATH/bindings/bash/powerline.sh
 export PATH=$PATH:$HOME/.local/bin
+export VIMINIT="source ~/.config/vim/vimrc"
