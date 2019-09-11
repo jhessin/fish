@@ -1,4 +1,4 @@
 function vimrc
-  cd ~/.SpaceVim.d/
+  cd ~/.config/nvim/
 end
 
