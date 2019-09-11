@@ -9,7 +9,7 @@ set -gx EDITOR /usr/bin/vim
 
 # This is supposed to allow nvim to read man pages
 set -gx PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
-    vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+    nvim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
     -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
@@ -76,4 +76,3 @@ set -gx MOVIES $MEDIA/Videos/Movies
 set -gx MUSIC $MEDIA/Music
 set -gx TV $MEDIA/Videos/TV
 
-# set -gx VIMINIT "source ~/.config/nvim/init.vim"
