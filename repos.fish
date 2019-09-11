@@ -1,4 +1,4 @@
-set repos $HOME/.SpaceVim.d
+set repos $HOME/.config/nvim
 set -a repos $HOME/.local/bin
 set -a repos $HOME/.config/termite
 set -ax repos $HOME/.config/powerline
@@ -11,9 +11,9 @@ set -a linuxRepos $HOME/.config/nitrogen
 set -ax linuxRepos $HOME/.config/conky
 
 function setup_repos
-  if not test -d $HOME/.SpaceVim.d/.git
-    rm -rf $HOME/.SpaceVim.d
-    git clone git@bitbucket.org:jhessin/vim.git $HOME/.SpaceVim.d
+  if not test -d $HOME/.config/nvim/.git
+    rm -rf $HOME/.config/nvim
+    git clone git@bitbucket.org:jhessin/vim.git $HOME/.config/nvim
   end
 
   if not test -d ~/.local/bin/.git
