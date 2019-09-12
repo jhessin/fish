@@ -18,7 +18,7 @@ source ~/.config/fish/repos.fish
 setup_repos
 
 # then update them all (also installs programs
-update
+update -p
 
 if not test -d ~/.SpaceVim
   curl -sLf https://spacevim.org/install.sh | bash

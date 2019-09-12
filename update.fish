@@ -1,6 +1,9 @@
-function copy_files
-  # first update all packages
+function update_programs
   yay -Syu --noconfirm --sudoloop
+  rustup update
+end
+
+function copy_files
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish
   # copy backup files
@@ -58,6 +61,11 @@ function install_packages
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
   end
+  rustup toolchain add nightly
+  cargo +nightly install racer
+  rustup component add rls-preview --toolchain nightly
+  rustup component add rust-analysis --toolchain nightly
+  rustup component add rust-src --toolchain nightly
 end
 
 

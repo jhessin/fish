@@ -11,6 +11,7 @@ function update
 
   source ~/.config/fish/update.fish
 
+  update_programs
   copy_files
   for option in $argv
     switch "$option"
