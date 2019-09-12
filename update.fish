@@ -1,6 +1,6 @@
 function copy_files
   # first update all packages
-  yay -Syu --sudoloop
+  yay -Syu --noconfirm --sudoloop
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish
   # copy backup files
