@@ -1,3 +1,4 @@
+#!/usr/bin/fish
 # add the LFS path
 set LFS /mnt/lfs
 
