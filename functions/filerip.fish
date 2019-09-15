@@ -5,6 +5,7 @@ function filerip -a filename
   set dest $rootname.mkv
   if HandBrakeCLI -i $filename -Z "H.264 MKV 720p30" -o $temp/$dest
     cp -v $temp/$dest $dest
+    rm $filename.bak
   else
     echo CANCELED
   end
