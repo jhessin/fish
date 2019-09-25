@@ -5,7 +5,7 @@ function yayget
   if test $args[1] = -y
     yay -Sy --noconfirm $argv[1..-1]
   else
-    yay -Sy $argv
+    yay -Sy $argv --sudoloop
   end
 end
 
