@@ -1,6 +1,6 @@
 function gpush
   git add .
-  git commit
+  git commit -m "updated"
   git push $argv
   git push --all
 end
