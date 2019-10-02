@@ -1,14 +1,82 @@
 set repos $HOME/.config/nvim
-set -a repos $HOME/.local/bin
-set -a repos $HOME/.config/termite
-set -ax repos $HOME/.config/powerline
+set -a repos $HOME/.config/powerline
+
+set localrepos $HOME/.config/termite
+set -a localrepos $HOME/.local/bin
+set -a localrepos $HOME/.config/conky
+set -a localrepos $HOME/.config/nitrogen
+set -a localrepos $HOME/.config/i3status
 
 set linuxRepos $HOME/.irssi
 set -a linuxRepos $HOME/.config/i3
-set -a linuxRepos $HOME/.config/i3status
 set -a linuxRepos $HOME/.config/dmenu-recent
-set -a linuxRepos $HOME/.config/nitrogen
-set -ax linuxRepos $HOME/.config/conky
+
+function update_repos
+  for repo in $repos
+    if pushd $repo
+      echo "updating $repo"
+      gpull
+      popd
+    end
+  end
+  
+  for repo in $localrepos
+    if pushd $repo
+      echo "updating $repo"
+      git checkout master
+      gpull
+      git checkout (basename)
+      gpull
+      git merge master
+      gpush
+      popd
+    end
+  end
+  
+  if test (uname) = 'Linux'
+    for repo in $linuxRepos
+      if pushd $repo
+        echo "updating $repo"
+        gpull
+        popd
+      end
+    end
+  end
+
+end
+
+function backup_repos
+  for repo in $repos
+    if pushd $repo
+      echo "saving $repo"
+      gpush
+      popd
+    end
+  end
+  
+  for repo in $localrepos
+    if pushd $repo
+      echo "saving $repo"
+      git checkout master
+      gpull
+      git checkout (basename)
+      git merge master
+      gpush
+      popd
+    end
+  end
+  
+  if test (uname) = 'Linux'
+    for repo in $linuxRepos
+      if pushd $repo
+        echo "saving $repo"
+        gpush
+        popd
+      end
+    end
+  end
+
+end
 
 function setup_repos
   if not test -d $HOME/.config/nvim/.git

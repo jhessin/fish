@@ -15,23 +15,7 @@ function copy_files
 
   cp $target/mimeapps.list $HOME/.config/mimeapps.list
 
-  for dir in $repos
-    if pushd $dir
-      echo "updating $dir"
-      gpull
-      popd
-    end
-  end
-
-  if test (uname) = 'Linux'
-    for dir in $linuxRepos
-      if pushd $dir
-        echo "updating $dir"
-        gpull
-        popd
-      end
-    end
-  end
+  update_repos
 
   for dir in $HOME/Documents/github/*
     if pushd $dir

@@ -34,24 +34,7 @@ end
 function backup_others
 
   # then we backup extra repos
-  for dir in $repos
-    if pushd $dir
-      echo "saving $dir"
-      gpush
-      popd
-    end
-  end
-
-  # backup linux only repos
-  if test (uname) = 'Linux'
-    for dir in $linuxRepos
-      if pushd $dir
-        echo "saving $dir"
-        gpush
-        popd
-      end
-    end
-  end
+  backup_repos
 
   # then we backup the github and bitbucket repos
   for dir in $HOME/Documents/github/*
@@ -75,7 +58,6 @@ function backup
   # bring in any additional repos and files
   source $HOME/.config/fish/repos.fish
   source $HOME/.config/fish/files.fish
-
   for option in $argv
     switch "$option"
       case -p --packages
