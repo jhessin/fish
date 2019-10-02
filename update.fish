@@ -1,6 +1,6 @@
 function update_programs
   yay -Syu --noconfirm --sudoloop
-  sudo rustup update
+  rustup update
 end
 
 function copy_files
