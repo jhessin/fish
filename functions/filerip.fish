@@ -4,7 +4,7 @@ function filerip -a filename
   set dest $rootname.mkv
   set src $rootname.bak
   mv $filename $src
-  if HandBrakeCLI -i $src -Z "H.264 MKV 720p30" -o $temp/$dest
+  if HandBrakeCLI -i $src -Z "H.264 MKV 720p30" -a eng -s eng -o $temp/$dest
     cp -v $temp/$dest $dest
     rm $src
   else
