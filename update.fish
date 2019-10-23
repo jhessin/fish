@@ -1,5 +1,7 @@
 function update_programs
-  yay -Syu --noconfirm --sudoloop
+  if test (uname) = 'Linux'
+    yay -Syu --noconfirm --sudoloop
+  end
   rustup update
 end
 
