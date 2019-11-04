@@ -38,7 +38,9 @@ set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 
 # Add ruby gems to the path
 set -g fish_user_paths $fish_user_paths $HOME/.local/bin 
-set -g fish_user_paths $fish_user_paths $HOME/.gem/ruby/2.3.0/bin 
+set -ag fish_user_paths (ruby -e 'puts Gem.user_dir')/bin
+# set -g fish_user_paths $fish_user_paths $HOME/.gem/ruby/2.3.0/bin
+# set -ag fish_user_paths $HOME/.gem/ruby/2.6.0/bin
 
 # Add cargo and it's installs to the path
 set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
