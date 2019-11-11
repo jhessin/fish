@@ -244,8 +244,7 @@ teamviewer
 terminus-font
 termite
 texinfo
-texlive-bin
-texlive-core
+texlive-full
 thunar-shares-plugin-gtk3
 tlp
 tmux
