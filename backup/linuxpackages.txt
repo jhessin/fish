@@ -310,4 +310,6 @@ xpdf
 xterm
 yarn
 yay
+zathura
+zathura-pdf-poppler
 zsh
