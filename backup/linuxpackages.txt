@@ -87,6 +87,7 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
+gthumb
 gtk3-classic
 gtksourceview-pkgbuild
 gufw
@@ -307,6 +308,7 @@ xorg-xhost
 xorg-xinit
 xorg-xkill
 xorg-xprop
+xpdf
 xterm
 yarn
 yay
