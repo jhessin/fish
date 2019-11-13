@@ -5,7 +5,6 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
-android-studio
 android-tools
 arandr
 artwork-i3
