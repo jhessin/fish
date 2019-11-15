@@ -311,5 +311,6 @@ xterm
 yarn
 yay
 zathura
+zathura-ps
 zathura-pdf-poppler
 zsh

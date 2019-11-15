@@ -10,6 +10,7 @@ set -a localrepos $HOME/.config/i3status
 set linuxRepos $HOME/.irssi
 set -a linuxRepos $HOME/.config/i3
 set -a linuxRepos $HOME/.config/dmenu-recent
+set -a linuxRepos $HOME/.config/zathura
 
 function update_repos
   for repo in $repos
@@ -119,6 +120,11 @@ function setup_repos
     if not test -d ~/.config/i3/.git
       rm -rf ~/.config/i3
       hub clone jhessin/i3 ~/.config/i3
+    end
+
+    if not test -d ~/.config/zathura/.git
+      rm -rf ~/.config/zathura
+      hub clone jhessin/zathura ~/.config/zathura
     end
 
     if not test -d ~/.config/nitrogen/.git
