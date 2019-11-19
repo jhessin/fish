@@ -11,6 +11,7 @@ set linuxRepos $HOME/.irssi
 set -a linuxRepos $HOME/.config/i3
 set -a linuxRepos $HOME/.config/dmenu-recent
 set -a linuxRepos $HOME/.config/zathura
+set -a linuxRepos $HOME/.config/yay
 
 function update_repos
   for repo in $repos
@@ -20,7 +21,7 @@ function update_repos
       popd
     end
   end
-  
+
   for repo in $localrepos
     if pushd $repo
       echo "updating $repo"
@@ -33,7 +34,7 @@ function update_repos
       popd
     end
   end
-  
+
   if test (uname) = 'Linux'
     for repo in $linuxRepos
       if pushd $repo
@@ -54,7 +55,7 @@ function backup_repos
       popd
     end
   end
-  
+
   for repo in $localrepos
     if pushd $repo
       echo "saving $repo"
@@ -66,7 +67,7 @@ function backup_repos
       popd
     end
   end
-  
+
   if test (uname) = 'Linux'
     for repo in $linuxRepos
       if pushd $repo
@@ -80,13 +81,16 @@ function backup_repos
 end
 
 function setup_repos
+  set BACKUPS $HOME/.local/backups
+  mkdir -p $BACKUPS
+
   if not test -d $HOME/.config/nvim/.git
-    rm -rf $HOME/.config/nvim
+    mv $HOME/.config/nvim $BACKUPS
     git clone git@bitbucket.org:jhessin/vim.git $HOME/.config/nvim
   end
 
   if not test -d ~/.local/bin/.git
-    rm -rf ~/.local/bin
+    mv ~/.local/bin $BACKUPS
     hub clone jhessin/bin ~/.local/bin
     pushd ~/.local/bin
     gfetch (hostname)
@@ -94,12 +98,12 @@ function setup_repos
   end
 
   if not test -d ~/.config/powerline/.git
-    rm -rf ~/.config/powerline
+    mv ~/.config/powerline $BACKUPS
     hub clone jhessin/powerline ~/.config/powerline
   end
 
   if not test -d ~/.config/termite/.git
-    rm -rf ~/.config/termite
+    mv ~/.config/termite $BACKUPS
     hub clone jhessin/termite ~/.config/termite
     pushd ~/.config/termite
     gfetch (hostname)
@@ -108,27 +112,22 @@ function setup_repos
 
  if test (uname) = 'Linux'
     if not test -d ~/.irssi/.git
-      rm -rf ~/.irssi
+      mv ~/.irssi $BACKUPS
       hub clone jhessin/.irssi ~/.irssi
     end
 
-    if not test -d $HOME/.config/dmenu-recent/.git
-      rm -rf $HOME/.config/dmenu-recent
-      hub clone jhessin/dmenu-recent $HOME/.config/dmenu-recent
-    end
-
     if not test -d ~/.config/i3/.git
-      rm -rf ~/.config/i3
+      mv ~/.config/i3 $BACKUPS
       hub clone jhessin/i3 ~/.config/i3
     end
 
     if not test -d ~/.config/zathura/.git
-      rm -rf ~/.config/zathura
+      mv ~/.config/zathura $BACKUPS
       hub clone jhessin/zathura ~/.config/zathura
     end
 
     if not test -d ~/.config/nitrogen/.git
-      rm -rf ~/.config/nitrogen
+      mv ~/.config/nitrogen $BACKUPS
       hub clone jhessin/nitrogen ~/.config/nitrogen
       pushd ~/.config/nitrogen
       gfetch (hostname)
@@ -136,7 +135,7 @@ function setup_repos
     end
 
     if not test -d ~/.config/conky/.git
-      rm -rf ~/.config/conky
+      mv ~/.config/conky $BACKUPS
       hub clone jhessin/conky ~/.config/conky
       pushd ~/.config/conky
       gfetch (hostname)
@@ -144,7 +143,7 @@ function setup_repos
     end
 
     if not test -d ~/.config/i3status/.git
-      rm -rf ~/.config/i3status
+      mv ~/.config/i3status $BACKUPS
       hub clone jhessin/i3status ~/.config/i3status
       pushd ~/.config/i3status
       gfetch (hostname)
