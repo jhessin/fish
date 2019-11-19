@@ -42,7 +42,7 @@ function install_packages
   if test (uname) = 'Linux'
     echo "Installing Packages"
     # yay -Sy --needed --noconfirm - < $linuxPackages
-    yay -Sy --needed --sudoloop - < $linuxPackages
+    yay -Sy --needed --noconfirm --sudoloop - < $linuxPackages
   else
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
@@ -53,5 +53,3 @@ function install_packages
   rustup component add rust-analysis --toolchain nightly
   rustup component add rust-src --toolchain nightly
 end
-
-
