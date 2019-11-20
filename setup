@@ -1,5 +1,5 @@
 #!/bin/sh
 
-yay -Syy fish --sudoloop --noconfirm
+yay -Syy fish hub --sudoloop --noconfirm
 
 curl https://raw.githubusercontent.com/jhessin/fish/master/setup.fish | fish
