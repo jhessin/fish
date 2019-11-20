@@ -1,22 +1,5 @@
-#!/usr/bin/env fish
+#!/bin/sh
 
-# Download or reset this repo
+yay -Syy fish --sudoloop --noconfirm
 
-if not test -d ~/.config/fish/.git
-  rm -rf ~/.config/fish
-  hub clone jhessin/fish ~/.config/fish
-else
-  pushd ~/.config/fish
-  git reset --hard
-  git pull
-  source ~/.config/fish/config.fish
-end
-
-source ~/.config/fish/repos.fish
-
-# Start by seting up all the necessary repos
-setup_repos
-
-# then update them all (also installs programs
-update 
-
+curl https://raw.githubusercontent.com/jhessin/fish/master/setup.fish | fish
