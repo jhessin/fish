@@ -18,5 +18,5 @@ source ~/.config/fish/repos.fish
 setup_repos
 
 # then update them all (also installs programs
-update -p
+update 
 
