@@ -1,15 +1,11 @@
+#!/usr/bin/env fish
 set repos $HOME/.config/nvim
 set -a repos $HOME/.config/powerline
 
-set localrepos $HOME/.config/termite
-set -a localrepos $HOME/.local/bin
-set -a localrepos $HOME/.config/conky
+set localrepos $HOME/.local/bin
 set -a localrepos $HOME/.config/nitrogen
-set -a localrepos $HOME/.config/i3status
 
-set linuxRepos $HOME/.irssi
-set -a linuxRepos $HOME/.config/i3
-set -a linuxRepos $HOME/.config/dmenu-recent
+set linuxRepos $HOME/.config/i3
 set -a linuxRepos $HOME/.config/zathura
 set -a linuxRepos $HOME/.config/yay
 
@@ -89,6 +85,11 @@ function setup_repos
     git clone git@bitbucket.org:jhessin/vim.git $HOME/.config/nvim
   end
 
+  if not test -d ~/.config/powerline/.git
+    mv ~/.config/powerline $BACKUPS
+    hub clone jhessin/powerline ~/.config/powerline
+  end
+
   if not test -d ~/.local/bin/.git
     mv ~/.local/bin $BACKUPS
     hub clone jhessin/bin ~/.local/bin
@@ -97,25 +98,15 @@ function setup_repos
     popd
   end
 
-  if not test -d ~/.config/powerline/.git
-    mv ~/.config/powerline $BACKUPS
-    hub clone jhessin/powerline ~/.config/powerline
-  end
-
-  if not test -d ~/.config/termite/.git
-    mv ~/.config/termite $BACKUPS
-    hub clone jhessin/termite ~/.config/termite
-    pushd ~/.config/termite
+  if not test -d ~/.config/nitrogen/.git
+    mv ~/.config/nitrogen $BACKUPS
+    hub clone jhessin/nitrogen ~/.config/nitrogen
+    pushd ~/.config/nitrogen
     gfetch (hostname)
     popd
   end
 
  if test (uname) = 'Linux'
-    if not test -d ~/.irssi/.git
-      mv ~/.irssi $BACKUPS
-      hub clone jhessin/.irssi ~/.irssi
-    end
-
     if not test -d ~/.config/i3/.git
       mv ~/.config/i3 $BACKUPS
       hub clone jhessin/i3 ~/.config/i3
@@ -125,29 +116,10 @@ function setup_repos
       mv ~/.config/zathura $BACKUPS
       hub clone jhessin/zathura ~/.config/zathura
     end
-
-    if not test -d ~/.config/nitrogen/.git
-      mv ~/.config/nitrogen $BACKUPS
-      hub clone jhessin/nitrogen ~/.config/nitrogen
-      pushd ~/.config/nitrogen
-      gfetch (hostname)
-      popd
-    end
-
-    if not test -d ~/.config/conky/.git
-      mv ~/.config/conky $BACKUPS
-      hub clone jhessin/conky ~/.config/conky
-      pushd ~/.config/conky
-      gfetch (hostname)
-      popd
-    end
-
-    if not test -d ~/.config/i3status/.git
-      mv ~/.config/i3status $BACKUPS
-      hub clone jhessin/i3status ~/.config/i3status
-      pushd ~/.config/i3status
-      gfetch (hostname)
-      popd
+    
+    if not test -d ~/.config/yay/.git
+      mv ~/.config/yay $BACKUPS
+      hub clone jhessin/yay ~/.config/yay
     end
   end
 
