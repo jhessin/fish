@@ -47,9 +47,4 @@ function install_packages
     cat $macBrewList | xargs brew install 2> /dev/null
     cat $macBrewList | xargs brew upgrade 2> /dev/null
   end
-  rustup toolchain add nightly
-  cargo +nightly install racer
-  rustup component add rls-preview --toolchain nightly
-  rustup component add rust-analysis --toolchain nightly
-  rustup component add rust-src --toolchain nightly
 end
